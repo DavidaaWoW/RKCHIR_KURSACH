@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="shortcut icon" href="../icon.jpg" />
+    <title>Сайт Гегия Давита</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container header_flex">
+        <div class="logo">
+          <a href=""><img src="../images/logo.jpg" alt="logo image" /></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li class="menu-button">
+              <script src="../scripts/mobile-menu.js"></script>
+              <button onclick="mobilemenuShow()">
+                <img src="../images/menu-icon.png" alt="menu icon" />
+              </button>
+              <ul class="menu-hideable">
+                <li>
+                  <button onclick="mobilemenuHide()" class="mobile-menu-exit">
+                    <img
+                      src="../images/close-mobile-menu.jpg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                  </button>
+                </li>
+                <li class="mobile-menu-border"><a href="">На главную!</a></li>
+                <li class="mobile-menu-border">
+                  <a href="">Коротко обо мне</a>
+                </li>
+                <li class="mobile-menu-border"><a href="">Университет</a></li>
+                <li class="mobile-menu-border">
+                  <a href="">Конференция "цифровизация техносферы"</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="">Работа IT специалистом</a>
+                </li>
+                <li>
+                  <button class="contact-button mobile-contact">
+                    Контакты
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item item-shape"><a href="">На главную!</a></li>
+            <li class="menu-item item-shape"><a href="">Коротко обо мне</a></li>
+            <li class="menu-item item-shape"><a href="">Университет</a></li>
+            <li class="menu-item item-shape">
+              <a href="">Конференция "цифровизация техносферы"</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="">Работа IT специалистом</a>
+            </li>
+            <li class="menu-item">
+              <button class="contact-button">Контакты</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container greeting">
+        <div class="greeting-grid">
+          <div class="greeting-text">
+            <h1>Добро пожаловать!</h1>
+            <h2>Вы находитесь на сайте Давита Гегия</h2>
+            <ul>
+              <li>Веб-разработчик</li>
+              <li>IT специалист</li>
+              <li>Верстальщик</li>
+              <li>Специалист по NoCode решениям</li>
+            </ul>
+            <div class="greeting-buttons-flex">
+              <button class="greeting-button-cv">Скачать CV</button>
+              <button class="greeting-button-about">Обо мне</button>
+            </div>
+          </div>
+          <div class="greeting-img-wrapper">
+            <img
+              class="greeting-img"
+              src="../images/greeting-photo.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container actual">
+        <h1 class="actual-header">Актуальный стек технологий.</h1>
+        <div class="actual-flex">
+          <img src="../images/stack.webp" alt="stack image" />
+          <ul>
+            <li><span>HTML+CSS</span></li>
+            <li><span>Javascript</span></li>
+            <li><span>React/React native</span></li>
+            <li><span>C++, WXWidgets, CLI/Windows Forms</span></li>
+            <li><span>C# .Net</span></li>
+            <li><span>Java</span></li>
+            <li><span>Python - Webscrapping -> CSV</span></li>
+            <li><span>NoCode конструктор приложений Adalo</span></li>
+            <li><span>Integromat - NoCode бекэнд + интеграции</span></li>
+            <li><span>Git+Github (базовый уровень)</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container question">
+        <h1 class="question-header">Почему такой разброс?</h1>
+        <h2>
+          Именно такой вопрос возможно у Вас возник после просмотра предыдущего
+          блока
+        </h2>
+        <p class="question-text">
+          Нет, всё вышеперечисленное не находится на уровне "посмотрел
+          десятиминутный урок", по всем вышеперечисленным пунктам есть подробное
+          описание в других разделах сайта, в первую очередь стоит посетить
+          раздел <a href="">"Обо мне"</a>, там же находятся и проекты по каждому
+          из пунктов.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
