@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../about.css" />
+    <link rel="shortcut icon" href="../icon.jpg" />
+    <title>Сайт Гегия Давита</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header_flex">
+        <div class="logo">
+          <a href=""><img src="../images/logo.jpg" alt="logo image" /></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li class="menu-button">
+              <script src="../scripts/mobile-menu.js"></script>
+              <button onclick="mobilemenuShow()">
+                <img src="../images/menu-icon.png" alt="menu icon" />
+              </button>
+              <ul class="menu-hideable">
+                <li>
+                  <button onclick="mobilemenuHide()" class="mobile-menu-exit">
+                    <img
+                      src="../images/close-mobile-menu.jpg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                  </button>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="main.html">На главную!</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="about.html">Коротко обо мне</a>
+                </li>
+                <li class="mobile-menu-border"><a href="">Университет</a></li>
+                <li class="mobile-menu-border">
+                  <a href="">Конференция "цифровизация техносферы"</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="">Работа IT специалистом</a>
+                </li>
+                <li>
+                  <button class="contact-button mobile-contact">
+                    Контакты
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="main.html">На главную!</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="about.html">Коротко обо мне</a>
+            </li>
+            <li class="menu-item item-shape"><a href="">Университет</a></li>
+            <li class="menu-item item-shape">
+              <a href="">Конференция "цифровизация техносферы"</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="">Работа IT специалистом</a>
+            </li>
+            <li class="menu-item">
+              <button class="contact-button">Контакты</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container about">
+        <h1>История начинается 18 лет назад, в день, когда я родился...</h1>
+        <h2>
+          Это конечно же шутка, раздел ведь называется
+          <span style="text-decoration: underline; color: brown">коротко</span>
+          обо мне.
+        </h2>
+        <p class="about-text">
+          Родился в Грузии, в небольшом городке, под названием Марнеули, в 30км
+          от столицы. Там прожил свои первые 18 лет жизни и окончил школу. С
+          программированием практически не был знаком, лишь на уровне
+          редактирования JSON файлов в любимой игре, считал это скучным и
+          монотонным занятием. Однако в школе всегда были интересны математика с
+          физикой, поэтому выбор профессии сам собой ушёл в техническое русло, а
+          с учётом актуальности специальности, было решено поступать на
+          программную инженерию, в другую страну - Российскую Федерацию. Выбор
+          страны был сделан по многим причинам, основными из них являются
+          качество образования, и тот факт, что русский язык - мой родной. Среди
+          всех возможных университетов, мною был выбран РТУ МИРЭА, именно там и
+          начинается моё погружение в прекрасный и необъятный мир
+          программирования, где я полностью поменял своё мнение относительно
+          скучности данного занятия. Об этом можно подробнее можно прочитать в
+          разделе
+          <a href="">Университет</a>
+        </p>
+        <div class="about-facts">
+          <h1>Несколько фактов обо мне:</h1>
+          <script src="../scripts/about.js"></script>
+          <div class="about-facts-container">
+            <div class="about-facts-flex">
+              <button class="about-facts-button" onclick="factsButtonClick(0)">
+                +
+              </button>
+              <h2>Soft skills, или социальные навыки</h2>
+            </div>
+            <div class="about-facts-text-container">
+              <p class="about-facts-text">
+                В целом я могу себя назвать довольно социальным и крайне
+                неконфликтным человеком. Однако это не значит податливость и
+                мягкотелось, если у меня есть мнение, и я считаю его верным, то
+                я готов его отстаивать, применяя аргументы, и в то же время,
+                готов выслушивать конструктивную критику и всупать в дискуссии.
+                В школьное время участвовал во многих кружках, посещал семинары,
+                ходил в языковые клубы, ездил в летние лагеря, и всё это в
+                условиях, когда люди вокруг вообще не говорили, или говорили в
+                недостаточной степени на моём родном языке. Люблю работать в
+                команде, только в том случае, если сохраняется здоровая
+                атмосфера, а задания конкретно распределены между членами, и
+                конечно же составлен план.
+              </p>
+            </div>
+          </div>
+          <div class="about-facts-container">
+            <div class="about-facts-flex">
+              <button class="about-facts-button" onclick="factsButtonClick(1)">
+                +
+              </button>
+              <h2>Увлечения, хобби</h2>
+            </div>
+            <div class="about-facts-text-container">
+              <p class="about-facts-text">
+                Основным своим хобби, которым я увлекаюсь с пяти лет, я считаю
+                шахматы. Так, за моими плечами десятки региональных,
+                национальных и международных турниров, медали и кубки с
+                чемпионатов всех уровней, международный рейтинг шахматной
+                федерации ФИДЕ, и тысячи часов проведённых за увлекательнейшими
+                партиями, с разными контролями времени. <br />
+                Невозможно также не выделить программирование. Хоть оно и
+                преодолело уровень хобби, и перешло в статус работы и карьеры,
+                оно всё ещё приносит мне невероятное удовольствие, и я могу
+                заниматься даже собственными проектами в свободное от учёбы и
+                работы время. <br />
+                Из менее значимых увлечений можно выделить мою бесконечную
+                любовь к истории с географией. Нравится также читать и
+                размышлять о политике и социально значимых и актуальных темах.
+                Ну и отдельное место в моём сердце занимают настольные игры.
+              </p>
+            </div>
+          </div>
+          <div class="about-facts-container">
+            <div class="about-facts-flex">
+              <button class="about-facts-button" onclick="factsButtonClick(2)">
+                +
+              </button>
+              <h2>Любимая литература и кинематограф</h2>
+            </div>
+            <div class="about-facts-text-container">
+              <p class="about-facts-text">
+                Если выбор стоит между прочтением книги и просмотром фильма, то
+                вероятнее всего, я выберу первый вариант. Читаю я исключительно
+                художественную литературу. Научпоп и другие полезные материалы,
+                мне удобнее воспринимать в аудио-визуальном формате. Я не
+                считаю, что литература должна ставиться на уровень выше
+                кинематографа, ведь важен не инструмент получения информации, а
+                лишь сама её суть. Я могу месяцами ничего не читать, а затем
+                найти интересную книгу и с трудом отрываясь на приём пищи,
+                читать, не переставая, постоянно находясь в напряжении и
+                предвкушении. Своей самой любимой книгой/серией книг, я считаю
+                роман "Анжелика". Также я нахожусь в бесконечном восторге от
+                всего творчества Стивена Кинга. В кинематографе мне нравятся
+                фильмы с участием Джима Керри. А также сериалы: Доктор Кто,
+                доктор Хаус, сверхъестественное, остаться в живых.
+              </p>
+            </div>
+          </div>
+          <div class="about-facts-container">
+            <div class="about-facts-flex">
+              <button class="about-facts-button" onclick="factsButtonClick(3)">
+                +
+              </button>
+              <h2>Любимая музыка</h2>
+            </div>
+            <div class="about-facts-text-container">
+              <p class="about-facts-text">
+                Я действительно люблю слушать музыку! Любимые жанры: pop, edm,
+                rock/alternative, reggaeton. Обычно песни в моём плейлисте
+                бывают на английском, испанском и французском, иногда
+                проскальзывает корейский и хинди. Статус любимой группы у меня
+                имеют "Imagine dragons". С исполнителями всё не так просто, их
+                слишком много! А ещё к небольшому хобби пожалуй можно отнести
+                мой постоянный интерес к мировым чартам, будь то billboard,
+                IHeart, ARIA, bbc charts, или даже spotify global chart.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-main">
+          <a href="main.html">На главную</a>
+        </div>
+        <div class="footer-about">
+          <a href="about.html">Коротко обо мне</a>
+        </div>
+        <div class="footer-uni">
+          <h3>Университет</h3>
+        </div>
+        <div class="footer-conf">
+          <h3>Конференция "цифровизация техносферы"</h3>
+        </div>
+        <div class="footer-job">
+          <h3>Работа IT специалистом</h3>
+        </div>
+        <div class="footer-contact">
+          <div>
+            <a href="https://www.facebook.com/david.gegiya" target="_blank"
+              ><img src="../images/facebook-logo.png" alt="facebook logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/davidaa_wow123/" target="_blank"
+              ><img src="../images/instagram-logo.jpg" alt="instagram logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://vk.com/davidaawow" target="_blank"
+              ><img src="../images/vk-logo.jpg" alt="vkontakte logo"
+            /></a>
+          </div>
+          <div>
+            <a href="mailto:davidik.gegiya@gmail.com" target="_blank"
+              ><img src="../images/gmail-logo.png" alt="gmail logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://github.com/DavidaaWoW" target="_blank"
+              ><img src="../images/github-logo.png" alt="github logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
