@@ -24,6 +24,10 @@ h2 {
   display: block;
 }
 
+.about-facts {
+  margin-top: 47em;
+}
+
 .about-facts > h1 {
   color: #9f9f48;
   margin-bottom: 1em;
@@ -82,9 +86,143 @@ h2 {
   align-items: center;
 }
 
+.about-history {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#about-history-header {
+  text-align: center;
+  font-size: 2rem;
+  color: brown;
+  margin-bottom: 2em;
+  font-weight: bolder;
+}
+
+.about-history-slider {
+  border-style: double;
+  border-width: 1em;
+  padding: 1em 0;
+  position: absolute;
+  left: auto;
+  right: auto;
+  height: 40em;
+  max-width: 80em;
+  overflow: auto;
+}
+
+.about-history-slider-button-left,
+.about-history-slider-button-right {
+  position: absolute;
+  height: 250%;
+  width: 4em;
+}
+
+.about-history-slider-button-left {
+  left: 0;
+  top: 0;
+  background-color: gray;
+  opacity: 0.05;
+  transition: 0.5s;
+}
+
+.about-history-slider-button-right {
+  top: 0;
+  right: 0;
+  background-color: gray;
+  opacity: 0.05;
+  transition: 0.5s;
+}
+
+.about-history-slider-button-left:hover,
+.about-history-slider-button-right:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.about-history-slider > p {
+  color: brown;
+  text-align: center;
+}
+
+.about-margin {
+  margin-bottom: 5em;
+}
+
+.about-slider-image-container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-slider-image-container-2 > h4 {
+  margin: 1em 0;
+  font-size: 1rem;
+}
+
+.about-testimonila-main {
+  max-width: 800px;
+}
+
 /* Media */
+@media screen and (max-width: 1200px) {
+  .about-history-slider {
+    max-width: 65em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about-history-slider {
+    max-width: 55em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-history-slider {
+    max-width: 48em;
+  }
+
+  .about-slider-image-container-2 > img {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .about-history-slider {
+    max-width: 38em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-history-slider {
+    max-width: 32em;
+  }
+
+  .about-slider-image-container-2 > img {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-history-slider {
+    max-width: 22em;
+  }
+}
+
 @media screen and (max-width: 350px) {
   .about-facts-flex > h2 {
     font-size: 0.9rem;
+  }
+  .about-history-slider {
+    max-width: 18em;
+  }
+
+  .about-history > h3 {
+    font-size: 1.5rem;
+  }
+  html {
+    font-size: 12px;
   }
 }

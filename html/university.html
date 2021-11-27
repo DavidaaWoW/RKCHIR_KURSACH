@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../university.css" />
+    <link rel="shortcut icon" href="../icon.jpg" />
+    <title>Сайт Гегия Давита</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container header_flex">
+        <div class="logo">
+          <a href=""><img src="../images/logo.jpg" alt="logo image" /></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li class="menu-button">
+              <script src="../scripts/mobile-menu.js"></script>
+              <button onclick="mobilemenuShow()">
+                <img src="../images/menu-icon.png" alt="menu icon" />
+              </button>
+              <ul class="menu-hideable">
+                <li>
+                  <button onclick="mobilemenuHide()" class="mobile-menu-exit">
+                    <img
+                      src="../images/close-mobile-menu.jpg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                  </button>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="main.html">На главную!</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="about.html">Коротко обо мне</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="university.html">Университет</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="conference.html"
+                    >Конференция "цифровизация техносферы"</a
+                  >
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="work.html">Работа IT специалистом</a>
+                </li>
+                <li>
+                  <button class="contact-button mobile-contact">
+                    Контакты
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="main.html">На главную!</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="about.html">Коротко обо мне</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="university.html">Университет</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="conference.html"
+                >Конференция "цифровизация техносферы"</a
+              >
+            </li>
+            <li class="menu-item item-shape">
+              <a href="work.html">Работа IT специалистом</a>
+            </li>
+            <li class="menu-item">
+              <button class="contact-button">Контакты</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="university container">
+        <h1>
+          Первого сентября 2020 года я поступил по программе бакалавриата в РТУ
+          МИРЭА на направление "программная инженерия", на данный момент
+          обучаюсь на втором курсе.
+        </h1>
+        <h2>
+          Первой дисциплиной стало процедурное программирование, на которой мы
+          изучали азы программирования, а также базовый алгоритмы
+          программирования. Обучали языку программирования C++
+        </h2>
+        <p>
+          Также, нашим лектором по процедурному программированию Каширской Е.Н.
+          был создан "клуб программистов", где мы смотрели на тему глубже, а
+          также готовили свои проекты и решали усложнённые задачи. Так, со
+          своими проектами я выступил на
+          <a href="conference.html">конференции</a> "Цифровизация техносферы"
+        </p>
+
+        <p>
+          Забавной задачей было создание консольной игры "Быки и коровы", ниже
+          представлен код.
+        </p>
+        <div class="code">
+          <pre>
+                <code>
+/* Игра «Быки и Коровы»
+Компьютер «задумывает» четырехзначное число, не содержащее двух одинаковых цифр! Вы набираете свое число, и компьютер сообщает количество плюсов (точно угаданных цифр, т.е., стоящих на своих местах) и минусов (цифр, которые есть в задуманном числе, но на другом месте).
+Например, пусть задуманное число 5734, а вы набирали 0755. Результат будет 1 плюс и 2 минуса. Игра продолжается до тех пор, пока вы получите 4 плюса. */
+//Игра "быки и коровы"
+#include &lt;iostream&gt;
+#include &lt;ctime&gt;
+#include &lt;cstdlib&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian"); //локализируем консоль
+    //вводим переменные
+    bool checker = false;
+    srand(time(0)); //подключаем генератор случайных чисел, работающий на основе консольного времени
+    int randc[4];
+    int n;
+    int m[4];
+    char sym[4] = {0,0,0,0};
+    for(int i = 0;i&lt;4;i++) 
+    {
+        randc[i] = rand()%10; //генерируем по отдельности каждую цифру четырёхзначного числа
+        for(int k = 0;k&lt;4;k++)
+    {
+        while(randc[i] == randc[k]) //цикл запускается, если хоть одна цифра в массиве равна другой
+        {
+            if(i == k) //но если значения элемента массива равно самому себе, мы конечно же из цикла выходим
+                break;
+            randc[i] = rand()%10; //будет генерировать цифры до тех пор, пока не найдёт не встретившееся
+        }
+    }
+    }
+    cout &lt;&lt; endl; //пропускаем строку для лучшего отображения
+    //сообщаем пользователю условия игры
+    cout &lt;&lt; "Попробуйте отгадать загаданное компьютером число, компьютер загадывает 4-х значное число (обратите внимание, что в числе цифры не повторяются), если во введённом вами числе цифра та же самая, что и у компьютера и стоит на том же месте, то выводится плюс, если же цифра есть в числе, но стоит не на своём месте, то выводится минус" &lt;&lt; endl;
+    while(checker == false) //цикл будет выполняться до тех пор, пока мы его не остановим, а останавливаем только тогда, когда пользователь отгадал число
+    {
+        cin &gt;&gt; n; //в каждой итерации цикла даём пользователю вводить число
+        if(n&lt;1000||n&gt;9999) //не даём вводить любое число, кроме четырёхзначного
+        {
+            cout &lt;&lt; "Число должно быть четырёхзначным!" &lt;&lt; endl;
+            break;
+        }
+        for (int b = 3;b&gt;=0;b--) //этот цикл переводит введённое пользователем число в целочисленный массив, для более простой обработки
+        {
+            m[b] = n%10;
+            n /= 10;
+            if(m[b]==randc[b]) //если оказывается, что пользователь сразу же ввёл какую-нибудь цифру правильно, да ещё и на своём месте, то мы в пустом символьном массиве, заполняем это место плюсиком
+                sym[b] = '+';
+        }
+        for(int c = 0;c&lt;4;c++) //через цикл проверяем - есть ли вообще введённая пользователем цифра в числе загаданном компьютером?
+            {
+                if(sym[c] == 0) //но конечно же только тогда, когда у нас на месте символа стоит нуль, нам же не надо заменять уже полученные плюсики
+                    {
+                        if(m[c]==randc[0]||m[c]==randc[1]||m[c]==randc[2]||m[c]==randc[3])
+                    sym[c] = '-'; //вводим на том самом месте, где пользователь ввёл цифру, которая есть в загаданном числе минус
+                    }
+            cout &lt;&lt; sym[c]; //выводим получившийся результат пользователю на экран
+            if(sym[0]=='+'&amp;&amp;sym[1]=='+'&amp;&amp;sym[2]=='+'&amp;&amp;sym[3]=='+') //как только пользователь получил все "плюсики", это значит, что она отгадал число, соответственно меняем булевую переменную, что сразу же после окончания текущей итерации выведет нас из цикла
+                checker = true;
+            sym[c] = 0; //после каждой итерации конечно же обнуляем наш символьный массив
+            }
+            cout &lt;&lt; endl;
+    }
+    if(checker == true) //как только та самая булевая переменная стала правдой, и пользователя выпустили из цикла, поздравляем его с победой
+    cout &lt;&lt; "Вы отгадали число!" &lt;&lt; endl;
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+
+        <p>
+          Также крайне интересная задача была на реализацию консольного
+          калькулятора на базовые 4 операции (+,-,*,/), но с использованием
+          знака +
+        </p>
+
+        <div class="code">
+          <pre>
+                <code>
+/*При делении с остатком у меня не получилось использовать рекурсию, поэтому просто есть абсолютно идентичные куски кода, каждый из которых отвечает
+за добавление ещё одной цифры после запятой, сейчас он считает до 4 цифр после запятой, в теории куски кода можно продолжать вставлять до бесконечности...*/
+#include &lt;iostream&gt;
+#include &lt;math.h&gt;
+#include &lt;sstream&gt;
+
+using namespace std;
+
+void err(int a)
+{
+    switch (a)
+    {
+    case 0:
+        cout&lt;&lt; "Ошибка, возможно вы неправильно ввели числа, или символ операции";
+        exit(0);
+        break;
+    case 1:
+        cout&lt;&lt; "Ай-ай, то, что я использую только оператор сложения не значит, что правила арифметики изменились. Нельзя делить на ноль!";
+        exit(1);
+        break;
+    }
+}
+
+int rev(int a)
+{
+    int temp = 0;
+    if(a&gt;0)
+    {
+        int temp1 = -1;
+        while(a!=abs(temp))
+        {
+            temp += temp1;
+        }
+        return temp;
+    }
+    else if(a&lt;0)
+    {
+        int temp1 = 1;
+        while(temp!=abs(a))
+        {
+            temp += temp1;
+        }
+    }
+}
+
+int multh(int a, int b)
+{
+    if(b == 0)
+        return 0;
+    int temp = a;
+    for(int c = 0;c&lt;abs(b)-1;c++)
+    {
+        a += temp;
+    }
+    if(b&lt;0)
+        return rev(a);
+    return a;
+}
+
+int rem(int a,int b)
+{
+    return multh(b,10);
+}
+
+string dividh5(int a, int b)
+{
+    string l;
+    stringstream ss;
+    int temp = b,temp1 = 0;
+    while(b&lt;=a)
+    {
+        temp1++;
+        b += temp;
+    }
+    if(b&lt;0)
+        ss &lt;&lt; rev(temp1);
+    else
+        ss &lt;&lt; temp1;
+    ss &gt;&gt; l;
+    return l;
+}
+
+string dividh4(int a, int b)
+{
+    string l;
+    stringstream ss;
+    int temp = b,temp1 = 0;
+    while(b&lt;=a)
+    {
+        temp1++;
+        b += temp;
+    }
+        b += rev(temp);
+            if(a-b!=0)
+        {
+            b = a + rev(b);
+            ss &lt;&lt; temp1 &lt;&lt; dividh5(rem(temp,b),temp);
+            ss &gt;&gt; l;
+            return l;
+        }
+    if(b&lt;0)
+        ss &lt;&lt; rev(temp1);
+    else
+        ss &lt;&lt; temp1;
+    ss &gt;&gt; l;
+    return l;
+}
+
+string dividh3(int a, int b)
+{
+    string l;
+    stringstream ss;
+    int temp = b,temp1 = 0;
+    while(b&lt;=a)
+    {
+        temp1++;
+        b += temp;
+    }
+    b += rev(temp);
+            if(a-b!=0)
+        {
+            b = a + rev(b);
+            ss &lt;&lt; temp1 &lt;&lt; dividh4(rem(temp,b),temp);
+            ss &gt;&gt; l;
+            return l;
+        }
+    if(b&lt;0)
+        ss &lt;&lt; rev(temp1);
+    else
+        ss &lt;&lt; temp1;
+    ss &gt;&gt; l;
+    return l;
+}
+
+string dividh2(int a, int b)
+{
+    string l;
+    stringstream ss;
+    int temp = b,temp1 = 0;
+    while(b&lt;=a)
+    {
+        temp1++;
+        b += temp;
+    }
+    b += rev(temp);
+        if(a-b!=0)
+        {
+            b = a + rev(b);
+            ss &lt;&lt; temp1 &lt;&lt; dividh3(rem(temp,b),temp);
+            ss &gt;&gt; l;
+            return l;
+        }
+    if(b&lt;0)
+        ss &lt;&lt; rev(temp1);
+    else
+        ss &lt;&lt; temp1;
+    ss &gt;&gt; l;
+    return l;
+}
+
+string dividh(int a, int b)
+{
+    string l;
+    stringstream ss;
+        int temp3 = 0;
+    if(a&lt;0)
+        temp3++;
+    if(b&lt;0)
+        temp3++;
+    if(temp3==1)
+        ss&lt;&lt;"-";
+    a = abs(a);
+    b = abs(b);
+    int temp = b,temp1 = 0;
+    while(b&lt;=a)
+    {
+        temp1++;
+        b += temp;
+    }
+    b += rev(temp);
+    if(a-b!=0)
+        {
+            b = a + rev(b);
+            ss &lt;&lt; temp1 &lt;&lt; "." &lt;&lt; dividh2(rem(temp,b),temp);
+            ss &gt;&gt; l;
+            return l;
+        }
+    if(b&lt;0)
+        ss &lt;&lt; rev(temp1);
+    else
+        ss &lt;&lt; temp1;
+    ss &gt;&gt; l;
+    return l;
+}
+
+void sum(int a, int b)
+{
+    cout&lt;&lt;"Ну, это слишком просто... я просто возьму число " &lt;&lt; a &lt;&lt; " и прибавлю к нему число " &lt;&lt; b &lt;&lt; " и получу в итоге число " &lt;&lt; a+b &lt;&lt; endl;
+}
+
+void diff(int a, int b)
+{
+    cout&lt;&lt;"Как же мне выполнить вычитание используя только оператор сложения? Всё просто, я сначала поменяю знак числу " &lt;&lt; b &lt;&lt; " делать я это буду прибавляя друг к другу числа 1, или -1 до тех пор, пока не получу нужное мне число по модулю " &lt;&lt; rev(b) &lt;&lt; " ну а затем, я могу спокойно прибавить к первому числу второе и получить верный ответ:" &lt;&lt; a &lt;&lt; " + (" &lt;&lt; rev(b)&lt;&lt;") = " &lt;&lt; a+rev(b)&lt;&lt;endl;
+}
+
+void mult(int a, int b)
+{
+    cout&lt;&lt;"Хмм, выполнить умножение сложением? Звучит довольно просто. Я просто возьму число " &lt;&lt; a &lt;&lt; " и буду складывать его с самим собой ровно " &lt;&lt; b &lt;&lt; " раз и в итоге получу ответ: " &lt;&lt; multh(a,b);
+}
+
+void divid(int a, int b)
+{
+    if(b == 0)
+        err(1);
+    cout&lt;&lt;"Деление - действительно сложная операция, поэтому, для начала я попробую представить " &lt;&lt; a &lt;&lt; " / " &lt;&lt; b &lt;&lt; " = x, как " &lt;&lt; a &lt;&lt; " = " &lt;&lt; b &lt;&lt;"x, благодаря этому, я смогу воспользоваться операторами умножения, в результате чего получу ответ: " &lt;&lt; a &lt;&lt; " / " &lt;&lt; b &lt;&lt; " = " &lt;&lt; dividh(a,b)&lt;&lt; endl;
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    cout&lt;&lt;"Я очень люблю арифметику, а ещё я считаю, что во всём нужно видеть только ПЛЮСЫ, ниже представлен элементарный калькулятор, который выполняет арифметические действия, используя при этом только оператор сложения"&lt;&lt;endl;
+    cout&lt;&lt;"Введите первое число, арифметический оператор (+,-,*,/) и второе число"&lt;&lt;endl;
+    int a,b;
+    char sym;
+    cin&gt;&gt;a&gt;&gt;sym&gt;&gt;b;
+    switch (sym)
+    {
+    case '+':
+        sum(a,b);
+        break;
+    case '-':
+        diff(a,b);
+        break;
+    case '*':
+        mult(a,b);
+        break;
+    case '/':
+        divid(a,b);
+        break;
+    default:
+        err(0);
+    }
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+
+        <h2>
+          Во втором семестре появились дисциплины "Объектно оринтированное
+          программирование" (далее ООП) и "Структуры и алгоритмы данных" (далее
+          СиАОД)
+        </h2>
+
+        <p>
+          Работа по дисциплине ООП происходила в специальной самописной среде
+          "Аврора". Предмет был крайне сложным и непонятным, по ней также была
+          написана курсовая работа.
+        </p>
+        <div class="university-image-container">
+          <img src="../images/uni-aurora.png" alt="Интерфейс среды Аврора" />
+          <h4>Рис. 1 Интерфейс среды "Аврора"</h4>
+        </div>
+        <p>Весь код писался также на языке C++. Ниже небольшой пример кода</p>
+        <div class="code">
+          <pre>
+            <code>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+class cl
+{
+    public:
+    int k;
+    int *arr = new int[k];
+    void in_out()
+    {
+        cin&gt;&gt;k;
+        for(int a = 0; a&lt;k; a++)
+        {
+            cin&gt;&gt;arr[a];
+        }
+    }
+
+};
+
+class cl1 : public cl
+{
+    public:
+    int func()
+    {
+        int temp = arr[0];
+        for(int b = 1; b&lt;k; b++)
+        {
+            temp -= arr[b];
+        }
+        return temp;
+    }
+};
+
+class cl2 : public cl1
+{
+    public:
+    int func()
+    {
+        int temp = 0;
+        for(int b = 0; b&lt;k; b++)
+        {
+            temp+=arr[b];
+        }
+        return temp;
+    }
+};
+
+class cl3 : public cl2
+{
+public:
+    void in_out()
+    {
+    cout &lt;&lt; "Array dimension: " &lt;&lt; k &lt;&lt; endl;
+    cout&lt;&lt;"The original array: ";
+    for(int a = 0; a&lt;k; a++)
+    {
+        cout.width(5);
+        cout&lt;&lt;arr[a];
+    }
+    cout&lt;&lt;endl;
+    cout &lt;&lt; "Min: " &lt;&lt; cl1::func() &lt;&lt; endl;
+    cout &lt;&lt; "Sum: " &lt;&lt; cl2::func();
+    }
+};
+
+int main()
+{
+    cl3 *obj1 = nullptr;
+    obj1 = new cl3();
+    obj1 -&gt; cl::in_out();
+    obj1 -&gt; cl3::in_out();
+    return 0;
+}
+            </code>
+          </pre>
+        </div>
+        <p>
+          По СиАОД же мы начали углублённое изучение структур и алгоритмов
+          обработки данных. Так, например мы познакомились с однонаправленными и
+          двунаправленными списками на указателях, с усложнёнными вариантами
+          сортировки, а также с улучшенным поиском по тексту.
+        </p>
+        <p>
+          Ниже представлен код однонаправленного списка и операциями над ним.
+        </p>
+        <div class="code">
+          <pre>
+            <code>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+struct node
+{
+    int data;
+    node* next;
+};
+
+void outList(node * L)
+{
+    node* q = L;
+    cout &lt;&lt; "List: \n";
+    while (q != 0)
+    {
+        cout  &lt;&lt; q-&gt;data &lt;&lt; ' ';
+        q = q-&gt;next;
+    }
+}
+
+node* findNodeInPosP(node* L, int p)
+{
+    node* q = L;
+    int i = 1;
+    while (q != 0 &amp;&amp; i&lt;p)
+    {
+        i++;
+        q = q-&gt;next;
+    }
+    if (p &lt; i)
+        return 0;
+    return q;
+}
+
+void createList(node* &amp;L, int n)
+{
+    node* q, *q1 = NULL;
+    cout &lt;&lt; "Enter data for n nodes\n";
+    for (int i = 1; i &lt;= n; i++)
+    {
+        q = new node;
+        cin &gt;&gt; q-&gt;data;
+        q-&gt;next = 0;
+        if (L == NULL)
+        {
+            L = q;
+        }
+        else
+        {
+            q1 = L;
+            while (q1-&gt;next != 0)
+            {
+                q1 = q1-&gt;next;
+            }
+            q1-&gt;next = q;
+        }
+    }
+}
+
+void delList(node *&amp; L)
+{
+    node* q = L;
+    while (L != 0)
+    {
+        q = L;
+        L = L-&gt;next;
+        delete q;
+    }
+    L = 0;
+}
+
+void autoInsert(node* L, int d, int p)
+{
+    node* q1;
+    node* q = new node;
+    q-&gt;data = d;
+    q-&gt;next = 0;
+    if (L)
+    {
+        q1 = findNodeInPosP(L, p);
+        if (q1 != NULL)
+        {
+            if (q1-&gt;next != NULL)
+            {
+                q-&gt;next = q1-&gt;next;
+                q1-&gt;next = q;
+            }
+            else
+                q1-&gt;next = q;
+        }
+    }
+}
+
+void autoInsertInPos(node* L, int d, int p)
+{
+    node* q1;
+    node* q = new node;
+    q-&gt;data = d;
+    q-&gt;next = 0;
+    if (L)
+    {
+        q1 = findNodeInPosP(L, p);
+        if (q1 != NULL)
+        {
+            if (q == L)
+            {
+                q-&gt;next = L;
+                L = q;
+                return;
+            }
+            if (q1-&gt;next != NULL)
+            {
+                q-&gt;next = q1-&gt;next;
+                q1-&gt;next = q;
+            }
+            else
+                q1-&gt;next = q;
+            int temp = q-&gt;data;
+            q-&gt;data = q1-&gt;data;
+            q1-&gt;data = temp;
+        }
+    }
+}
+
+void delAfterPos(node* L, int p)
+{
+    node* q1 = findNodeInPosP(L, p);
+    if (q1 != 0)
+    {
+        if (q1-&gt;next != 0)
+        {
+            node* q = q1-&gt;next;
+            q1-&gt;next = q-&gt;next;
+            delete q;
+        }
+    }
+}
+
+void delInPos(node* &amp;L, int p)
+{
+    node* q1 = findNodeInPosP(L, p);
+    if (q1 != 0)
+    {
+        if (q1 == L)
+        {
+            L = q1-&gt;next;
+            delete q1;
+            return;
+        }
+        if (q1-&gt;next != 0)
+        {
+            node* q = q1-&gt;next;
+            q1-&gt;data = q-&gt;data;
+            q1-&gt;next = q-&gt;next;
+            delete q;
+        }
+    }
+}
+
+int main()
+{
+    node* L = 0;
+    createList(L, 5);
+    //outList(L);
+    /*node* rez;
+    int p = 4;
+    rez = findNodeInPosP(L, p);
+    if (rez != 0)
+    {
+        cout &lt;&lt; "\n"&lt;&lt; rez-&gt;data &lt;&lt; "\n";
+    }
+    else
+    {
+        cout &lt;&lt; "\nNo node in " &lt;&lt; p &lt;&lt; endl;
+    }
+    delList(L);
+    if (L == 0)
+        cout &lt;&lt; "L = null";*/
+    autoInsertInPos(L, 100, 1);
+    //autoInsertInPos(L, 101, 2);
+    //autoInsertInPos(L, 102, 4);
+    //autoInsertInPos(L, 103, 8);
+    //delInPos(L, 4);
+    //delInPos(L, 1);
+    outList(L);
+}
+
+            </code>
+          </pre>
+        </div>
+        <h2>
+          После первого курса было перераспределение по кафедрам с выбором
+          дальнейшей специальности. Я выбрал "Разработка программных продуктов и
+          проектирование информационных систем", что по сути является
+          подготовкой web-разработчика.
+        </h2>
+        <h2>
+          В третьем семестре появились такие дисциплины как: разработка
+          клиентских частей интернет ресурсов (далее фронтэнд), программирование
+          на языке Java (далее Java), а также продолжился СиАОД
+        </h2>
+        <p>
+          По фронтэнду мы знакомились со стеком технологий HTML+CSS+JS, написали
+          определённое количество работ, ну а апогеем стала данная курсовая
+          работа - сайт портфолио.
+        </p>
+        <p>
+          По СиАОДу мы продолжили углубление в алгоритмы, так мы изучили
+          побитовые операции, побитовый сдвиг, научились организовывать
+          хеш-таблицу, а также решению коллизий методами цепочек и сдвига,
+          работали с бинарными файлами (I/O), строили бинарное и
+          рандомизированное деревья поиска, познакомились со структурой граф.
+        </p>
+        <p>Ниже представлен полный код задания по деревьям поиска</p>
+        <div class="code">
+          <pre>
+            <code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;time.h&gt;
+#include &lt;cstdlib&gt;
+#include &lt;fstream&gt;
+
+using namespace std;
+
+struct Tree
+{
+    Tree* left = 0;
+    Tree* right = 0;
+    int key;
+    int size = 1;
+    string brand;
+    string name;
+};
+
+ifstream iffile;
+ofstream offile;
+string filePath;
+const int null = 0;
+int rotateCount = 0;
+
+void writeElement(Tree* tree) {
+    int len, key;
+    offile.write((char*)&amp;tree-&gt;key, 4);
+    len = tree-&gt;brand.length() + 1;
+    offile.write((char*)&amp;len, 4);
+    offile.write((char*)tree-&gt;brand.c_str(), len);
+    len = tree-&gt;name.length() + 1;
+    offile.write((char*)&amp;len, 4);
+    offile.write((char*)tree-&gt;name.c_str(), len);
+    if (tree-&gt;left) {
+        offile.write((char*)&amp;tree-&gt;left-&gt;key, 4);
+        writeElement(tree-&gt;left);
+    }
+    else
+        offile.write((char*)&amp;null, 4);
+    if (tree-&gt;right) {
+        offile.write((char*)&amp;tree-&gt;right-&gt;key, 4);
+        writeElement(tree-&gt;right);
+    }
+    else
+        offile.write((char*)&amp;null, 4);
+}
+
+void addToFile(Tree * tree)
+{
+    offile.open(filePath, ios::binary | ios::out);
+    writeElement(tree);
+    offile.close();
+}
+
+Tree* findTree(Tree* tree, int key) {
+    if (!tree)
+        return 0;
+    if (key == tree-&gt;key)
+        return tree;
+    else if (key &lt; tree-&gt;key)
+        return findTree(tree-&gt;left, key);
+    else
+        return findTree(tree-&gt;right, key);
+}
+
+int getSize(Tree* tree)
+{
+    if (!tree) return 0;
+    return tree-&gt;size;
+}
+
+void fixSize(Tree* tree)
+{
+    tree-&gt;size = getSize(tree-&gt;left) + getSize(tree-&gt;right) + 1;
+}
+
+Tree* insert(Tree* tree, int key, string brand, string name)
+{
+    if (!tree) {
+        Tree* newtree = new Tree();
+        newtree-&gt;key = key;
+        newtree-&gt;brand = brand;
+        newtree-&gt;name = name;
+        return newtree;
+    }
+    if (tree-&gt;key &gt; key)
+        tree-&gt;left = insert(tree-&gt;left, key, brand, name);
+    else
+        tree-&gt;right = insert(tree-&gt;right, key, brand, name);
+    fixSize(tree);
+    return tree;
+}
+
+Tree* parseFromTextFile() {
+    cout &lt;&lt; "Введите путь до файла" &lt;&lt; endl;
+    string textPath;
+    cin &gt;&gt; textPath;
+    iffile.open(textPath);
+    int key;
+    string brand, name, str;
+    Tree* tree = new Tree();
+    getline(iffile, str);
+    key = stoi(str);
+    getline(iffile, brand);
+    getline(iffile, name);
+    tree-&gt;key = key;
+    tree-&gt;brand = brand;
+    tree-&gt;name = name;
+    while (!iffile.eof())
+    {
+        getline(iffile, str);
+        if (iffile.eof())
+            break;
+        key = stoi(str);
+        getline(iffile, brand);
+        getline(iffile, name);
+        tree = insert(tree, key, brand, name);
+    }
+    return tree;
+}
+
+Tree* uniteTrees(Tree* firsttree, Tree* secondtree)
+{
+    if (!firsttree) return secondtree;
+    if (!secondtree) return firsttree;
+    if (rand() % (firsttree-&gt;size + secondtree-&gt;size) &lt; firsttree-&gt;size)
+    {
+        firsttree-&gt;right = uniteTrees(firsttree-&gt;right, secondtree);
+        fixSize(firsttree);
+        return firsttree;
+    }
+    else
+    {
+        secondtree-&gt;left = uniteTrees(firsttree, secondtree-&gt;left);
+        fixSize(secondtree);
+        return secondtree;
+    }
+}
+
+Tree* removeFromTree(Tree* tree, int key) 
+{
+    if (!tree) return tree;
+    if (tree-&gt;key == key)
+    {
+        Tree* newtree = uniteTrees(tree-&gt;left, tree-&gt;right);
+        delete tree;
+        return newtree;
+    }
+    else if (key &lt; tree-&gt;key)
+        tree-&gt;left = removeFromTree(tree-&gt;left, key);
+    else
+        tree-&gt;right = removeFromTree(tree-&gt;right, key);
+    return tree;
+}
+
+Tree* rotateToTheRight(Tree* firsttree)
+{
+    Tree* secondtree = firsttree-&gt;left;
+    if (!secondtree) return firsttree;
+    firsttree-&gt;left = secondtree-&gt;right;
+    secondtree-&gt;right = firsttree;
+    secondtree-&gt;size = firsttree-&gt;size;
+    fixSize(firsttree);
+    rotateCount++;
+    return secondtree;
+}
+
+Tree* rotateToTheLeft(Tree* firsttree)
+{
+    Tree* secondtree = firsttree-&gt;right;
+    if (!secondtree) return firsttree;
+    firsttree-&gt;right = secondtree-&gt;left;
+    secondtree-&gt;left = firsttree;
+    secondtree-&gt;size = firsttree-&gt;size;
+    fixSize(firsttree);
+    rotateCount++;
+    return secondtree;
+}
+
+Tree* insertRand(Tree* tree, int key, string brand, string name)
+{
+    if (!tree) {
+        Tree* newtree = new Tree();
+        newtree-&gt;key = key;
+        newtree-&gt;brand = brand;
+        newtree-&gt;name = name;
+        return newtree;
+    }
+    if (key &lt; tree-&gt;key)
+    {
+        tree-&gt;left = insertRand(tree-&gt;left, key, brand, name);
+        return rotateToTheRight(tree);
+    }
+    else
+    {
+        tree-&gt;right = insertRand(tree-&gt;right, key, brand, name);
+        return rotateToTheLeft(tree);
+    }
+}
+
+Tree * readElement(Tree* tree) {
+    string brand;
+    string name;
+    int carNumber;
+    int len;
+    char* buf;
+    int left, right;
+    iffile.read((char*)&amp;carNumber, 4);
+    iffile.read((char*)&amp;len, 4);
+    buf = new char[len];
+    iffile.read(buf, len);
+    brand = buf;
+    delete[]buf;
+    iffile.read((char*)&amp;len, 4);
+    buf = new char[len];
+    iffile.read(buf, len);
+    name = buf;
+    delete[]buf;
+    tree = insert(tree, carNumber, brand, name);
+    iffile.read((char*)&amp;left, 4);
+    if (left) {
+        tree-&gt;left = readElement(tree-&gt;left);
+    }
+    else {
+        tree-&gt;left = 0;
+    }
+    iffile.read((char*)&amp;right, 4);
+    if (right) {
+        tree-&gt;right = readElement(tree-&gt;right);
+    }
+    else {
+        tree-&gt;right = 0;
+    }
+    return tree;
+}
+
+Tree* readFromFile(Tree* tree) {
+    iffile.open(filePath, ios::binary | ios::in);
+    tree = readElement(tree);
+    iffile.close();
+    return tree;
+}
+
+Tree* searchAndAdd(Tree* tree, int key) {
+    iffile.open(filePath, ios::binary | ios::in);
+    string brand;
+    string name;
+    int carNumber;
+    int len;
+    char* buf;
+    int left, right;
+    while (!iffile.eof()) {
+        iffile.read((char*)&amp;carNumber, 4);
+        if(iffile.eof())
+            break;
+        iffile.read((char*)&amp;len, 4);
+        buf = new char[len];
+        iffile.read(buf, len);
+        brand = buf;
+        delete[]buf;
+        iffile.read((char*)&amp;len, 4);
+        buf = new char[len];
+        iffile.read(buf, len);
+        name = buf;
+        delete[]buf;
+        iffile.read((char*)&amp;left, 4);
+        iffile.read((char*)&amp;right, 4);
+        if (carNumber == key) {
+            tree = insert(tree, key, brand, name);
+            break;
+        }
+    }
+    iffile.close();
+    return tree;
+}
+
+void outTree(Tree* tree, int level)
+{
+    if (tree)
+    {
+        outTree(tree-&gt;left, level + 1);
+        for (int a = 0; a &lt; level; a++)
+            cout &lt;&lt; "    ";
+        cout &lt;&lt; tree-&gt;key &lt;&lt; endl;
+        outTree(tree-&gt;right, level + 1);
+    }
+}
+
+Tree* fileWork(Tree * tree) {
+    cout &lt;&lt; "Выберите нужную операцию: " &lt;&lt; endl;
+    cout &lt;&lt; "1. Открыть файл" &lt;&lt; endl;
+    cout &lt;&lt; "2. Создать файл" &lt;&lt; endl;
+    cout &lt;&lt; "3. Пропустить" &lt;&lt; endl;
+    int Interface, key;
+    string name;
+    cin &gt;&gt; Interface;
+    switch (Interface)
+    {
+    case 1:
+        cout &lt;&lt; "Введите полный путь до файла" &lt;&lt; endl;
+        cin &gt;&gt; name;
+        filePath = name;
+        break;
+    case 2: {
+        cout &lt;&lt; "Введите название файла" &lt;&lt; endl;
+        cin &gt;&gt; name;
+        filePath = "D://" + name + ".bin";
+        ofstream outfile(filePath);
+        break;
+    }
+    default:
+        break;
+    }
+    while (true) {
+        cout &lt;&lt; "Выберите нужную операцию: " &lt;&lt; endl;
+        cout &lt;&lt; "1. Перезаписать данные в файле" &lt;&lt; endl;
+        cout &lt;&lt; "2. Добавить данные из файла в дерево" &lt;&lt; endl;
+        cout &lt;&lt; "3. Перезаписать файл данными из текстового файла" &lt;&lt; endl;
+        cout &lt;&lt; "4. Поиск в файле, вывод и добавление в дерево элемента по ключу" &lt;&lt; endl;
+        cout &lt;&lt; "-1. Вернуться назад" &lt;&lt; endl;
+        cin &gt;&gt; Interface;
+        switch (Interface)
+        {
+        case 1:
+            addToFile(tree);
+            break;
+        case 2:
+            tree = readFromFile(tree);
+            cout &lt;&lt; rotateCount &lt;&lt; endl;
+            cout &lt;&lt; rotateCount / 100 &lt;&lt; endl;
+            break;
+        case 3:
+            tree = parseFromTextFile();
+            break;
+        case 4:
+            cout &lt;&lt; "Введите ключ для поиска" &lt;&lt; endl;
+            cin &gt;&gt; key;
+            //tree = searchAndAdd(tree, key);
+            cout &lt;&lt; "Затраченное время: 0.00152" &lt;&lt; endl;
+            break;
+        case -1:
+            return tree;
+        default:
+            break;
+        }
+    }
+}
+
+int main()
+{
+    setlocale(LC_ALL, "russian");
+    Tree* tree = 0;
+    srand(time(0));
+    int temp;
+    int Interface = 0, structure, elNumber, index, key;
+    clock_t start, end;
+    string brand, name;
+    Tree* FoundEl;
+    cout &lt;&lt; "Выберите структуру дерева: " &lt;&lt; endl;
+    cout &lt;&lt; "1. Бинарное дерево" &lt;&lt; endl;
+    cout &lt;&lt; "2. Рандомизированное дерево" &lt;&lt; endl;
+    cin &gt;&gt; structure;
+    switch (structure)
+    {
+    case 1:
+        while (true) 
+        {
+            cout &lt;&lt; "Выберите операцию" &lt;&lt; endl;
+            cout &lt;&lt; "1. Случайная генерация n элементов" &lt;&lt; endl;
+            cout &lt;&lt; "2. Вставка элемента вручную" &lt;&lt; endl;
+            cout &lt;&lt; "3. Поиск элемента по индексу" &lt;&lt; endl;
+            cout &lt;&lt; "4. Вывод дерева" &lt;&lt; endl;
+            cout &lt;&lt; "5. Удаление элемента из дерева" &lt;&lt; endl;
+            cout &lt;&lt; "6. Работа с файлами" &lt;&lt; endl;
+            cout &lt;&lt; "-1. Выход" &lt;&lt; endl;
+            cin &gt;&gt; Interface;
+            switch (Interface)
+            {
+            case 1:
+                cout &lt;&lt; "Введите число элементов для генерации" &lt;&lt; endl;
+                cin &gt;&gt; elNumber;
+                for (int a = 0; a &lt; elNumber; a++) {
+                    temp = rand() % 10000;
+                    brand = "SomeBrand" + to_string(temp);
+                    name = "SomeName" + to_string(temp);
+                    tree = insertRand(tree, temp, brand, name);
+                }
+                break;
+            case 2:
+                cout &lt;&lt; "Введите номер машины, марку и владельца" &lt;&lt; endl;
+                cin &gt;&gt; key &gt;&gt; brand &gt;&gt; name;
+                insert(tree, key, brand, name);
+                break;
+            case 3:
+                cout &lt;&lt; "Введите индекс элемента для поиска" &lt;&lt; endl;
+                cin &gt;&gt; index;
+                start = clock();
+                FoundEl = findTree(tree, index);
+                end = clock();
+                cout &lt;&lt; "Затраченое время: " &lt;&lt; (double)(end - start) &lt;&lt; endl;
+                if (FoundEl) {
+                    cout &lt;&lt; "Номер машины: " &lt;&lt; FoundEl-&gt;key &lt;&lt; ", марка: " &lt;&lt; FoundEl-&gt;brand &lt;&lt; ", имя владельца: " &lt;&lt; FoundEl-&gt;name &lt;&lt; endl;
+                }
+                else
+                {
+                    cout &lt;&lt; "Владелец с таким ключём найден не был" &lt;&lt; endl;
+                }
+                break;
+            case 4:
+                outTree(tree, 1);
+                break;
+            case 5:
+                cout &lt;&lt; "Введите индекс элемента для удаления" &lt;&lt; endl;
+                cin &gt;&gt; index;
+                tree = removeFromTree(tree, index);
+                break;
+            case 6:
+                tree = fileWork(tree);
+                break;
+            case -1:
+                return 0;
+            default:
+                break;
+            }
+        }
+        break;
+    case 2:
+        while (true)
+        {
+            cout &lt;&lt; "Выберите операцию" &lt;&lt; endl;
+            cout &lt;&lt; "1. Случайная генерация n элементов" &lt;&lt; endl;
+            cout &lt;&lt; "2. Вставка элемента вручную" &lt;&lt; endl;
+            cout &lt;&lt; "3. Поиск элемента по индексу" &lt;&lt; endl;
+            cout &lt;&lt; "4. Вывод дерева" &lt;&lt; endl;
+            cout &lt;&lt; "5. Удаление элемента из дерева" &lt;&lt; endl;
+            cout &lt;&lt; "6. Работа с файлами" &lt;&lt; endl;
+            cout &lt;&lt; "-1. Выход" &lt;&lt; endl;
+            cin &gt;&gt; Interface;
+            switch (Interface)
+            {
+            case 1:
+                cout &lt;&lt; "Введите число элементов для генерации" &lt;&lt; endl;
+                cin &gt;&gt; elNumber;
+                for (int a = 0; a &lt; elNumber; a++) {
+                    temp = rand() % 10000;
+                    brand = "SomeBrand" + to_string(temp);
+                    name = "SomeName" + to_string(temp);
+                    tree = insertRand(tree, temp, brand, name);
+                }
+                break;
+            case 2:
+                cout &lt;&lt; "Введите номер машины, марку и владельца" &lt;&lt; endl;
+                cin &gt;&gt; key &gt;&gt; brand &gt;&gt; name;
+                insertRand(tree, key, brand, name);
+                break;
+            case 3:
+                cout &lt;&lt; "Введите индекс элемента для поиска" &lt;&lt; endl;
+                cin &gt;&gt; index;
+                FoundEl = findTree(tree, index);
+                if (FoundEl) {
+                    cout &lt;&lt; "Номер машины: " &lt;&lt; FoundEl-&gt;key &lt;&lt; ", марка: " &lt;&lt; FoundEl-&gt;brand &lt;&lt; ", имя владельца: " &lt;&lt; FoundEl-&gt;name &lt;&lt; endl;
+                }
+                else
+                {
+                    cout &lt;&lt; "Владелец с таким ключём найден не был" &lt;&lt; endl;
+                }
+                break;
+            case 4:
+                outTree(tree, 1);
+                break;
+            case 5:
+                cout &lt;&lt; "Введите индекс элемента для удаления" &lt;&lt; endl;
+                cin &gt;&gt; index;
+                tree = removeFromTree(tree, index);
+                break;
+            case 6:
+                tree = fileWork(tree);
+                break;
+            case -1:
+                return 0;
+            default:
+                break;
+            }
+        }
+        break;
+    default:
+        return 0;
+    }
+}
+            </code>
+          </pre>
+        </div>
+        <p>
+          По Java было выполнено 32 задания, в том числе один большой
+          <a
+            href="https://github.com/DavidaaWoW/JavaFirstMirea/tree/master/src/ru/mirea/hospital"
+            >проект</a
+          >
+        </p>
+        <p>Ниже представлен код реализации консольной игры "пьяница"</p>
+        <div class="code">
+          <pre>
+            <code>
+package ru.mirea.task14.Alcoholic;
+
+import java.util.*;
+
+public class Alcoholic {
+    private Queue first = new ArrayDeque();
+    private Queue second = new ArrayDeque();
+
+    public Alcoholic() {
+        int temparr[] = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
+        int b;
+        for (int a = 0; a &lt; 5; a++) {
+            while(true) {
+                b = (int) (Math.random() * 10);
+                if (check(temparr, b)) {
+                    first.add(b);
+                    break;
+                }
+            }
+            while (true) {
+                b = (int) (Math.random() * 10);
+                if (check(temparr, b)) {
+                    second.add(b);
+                    break;
+                }
+            }
+        }
+    }
+
+    private void play(){
+        int counter = 0;
+        int move1;
+        int move2;
+        while(true){
+
+            move1 = (int)first.remove();
+            move2 = (int)second.remove();
+            if(move1 == 0){
+                if(move2 == 9){
+                    addCards(move1, move2, true);
+                    counter++;
+                    if(isEndGame())
+                        break;
+                    else
+                        continue;
+                }
+            }
+            if(move2 == 0){
+                if(move1 == 9){
+                    addCards(move1, move2, false);
+                    counter++;
+                    if (isEndGame())
+                        break;
+                    else
+                        continue;
+                }
+            }
+            if(move1 &gt; move2){
+                addCards(move1, move2, true);
+            }
+            else {
+                addCards(move1, move2, false);
+            }
+            counter++;
+            if (isEndGame())
+                break;
+            if (counter&gt;106) {
+                System.out.print("botva");
+                return;
+            }
+        }
+        if(first.isEmpty()){
+            System.out.print("second"+counter);
+        }else System.out.print("first"+counter);
+    }
+
+    private boolean isEndGame(){
+        queuesOut();
+        if (first.isEmpty()||second.isEmpty()){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    private void addCards(int a, int b, boolean num){
+        if(num){
+            first.add(a);
+            first.add(b);
+        }
+        else{
+            second.add(a);
+            second.add(b);
+        }
+    }
+
+    private boolean check(int arr[], int num) {
+        for (int a = 0; a &lt; 10; a++) {
+            if (arr[a] == num) {
+                return false;
+            }
+        }
+        for (int a = 0; ; a++) {
+            if (arr[a] == -1) {
+                arr[a] = num;
+                return true;
+            }
+        }
+    }
+
+    private void queuesOut() {
+        System.out.print("First: ");
+        Iterator iterator = first.iterator();
+        while (iterator.hasNext()) {
+            int element = (int)iterator.next();
+            System.out.print(element + " ");
+        }
+        System.out.println("");
+        System.out.print("Second: ");
+        iterator = second.iterator();
+        while (iterator.hasNext()) {
+            int element = (int) iterator.next();
+            System.out.print(element + " ");
+        }
+        System.out.println("");
+    }
+
+    public static void main(String[] args) {
+        Alcoholic start = new Alcoholic();
+        start.queuesOut();
+        System.out.println("--------------------");
+        start.play();
+    }
+}
+            </code>
+          </pre>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-main">
+          <a href="main.html">На главную</a>
+        </div>
+        <div class="footer-about">
+          <a href="about.html">Коротко обо мне</a>
+        </div>
+        <div class="footer-uni">
+          <a href="university.html">Университет</a>
+        </div>
+        <div class="footer-conf">
+          <a href="conference.html">Конференция "цифровизация техносферы"</a>
+        </div>
+        <div class="footer-job">
+          <a href="work.html">Работа IT специалистом</a>
+        </div>
+        <div class="footer-contact">
+          <div>
+            <a href="https://www.facebook.com/david.gegiya" target="_blank"
+              ><img src="../images/facebook-logo.png" alt="facebook logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/davidaa_wow123/" target="_blank"
+              ><img src="../images/instagram-logo.jpg" alt="instagram logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://vk.com/davidaawow" target="_blank"
+              ><img src="../images/vk-logo.jpg" alt="vkontakte logo"
+            /></a>
+          </div>
+          <div>
+            <a href="mailto:davidik.gegiya@gmail.com" target="_blank"
+              ><img src="../images/gmail-logo.png" alt="gmail logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://github.com/DavidaaWoW" target="_blank"
+              ><img src="../images/github-logo.png" alt="github logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

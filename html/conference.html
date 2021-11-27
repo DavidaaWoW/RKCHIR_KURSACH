@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../conference.css" />
+    <link rel="shortcut icon" href="../icon.jpg" />
+    <title>Сайт Гегия Давита</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header_flex">
+        <div class="logo">
+          <a href=""><img src="../images/logo.jpg" alt="logo image" /></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li class="menu-button">
+              <script src="../scripts/mobile-menu.js"></script>
+              <button onclick="mobilemenuShow()">
+                <img src="../images/menu-icon.png" alt="menu icon" />
+              </button>
+              <ul class="menu-hideable">
+                <li>
+                  <button onclick="mobilemenuHide()" class="mobile-menu-exit">
+                    <img
+                      src="../images/close-mobile-menu.jpg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                  </button>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="main.html">На главную!</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="about.html">Коротко обо мне</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="university.html">Университет</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="conference.html"
+                    >Конференция "цифровизация техносферы"</a
+                  >
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="work.html">Работа IT специалистом</a>
+                </li>
+                <li>
+                  <button class="contact-button mobile-contact">
+                    Контакты
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="main.html">На главную!</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="about.html">Коротко обо мне</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="university.html">Университет</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="conference.html"
+                >Конференция "цифровизация техносферы"</a
+              >
+            </li>
+            <li class="menu-item item-shape">
+              <a href="work.html">Работа IT специалистом</a>
+            </li>
+            <li class="menu-item">
+              <button class="contact-button">Контакты</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="conference container">
+        <h1>
+          После знакомства с языком C++ с консольным взаимодействием с
+          пользователем, мне стало интересно программирование GUI, а т.к. знал я
+          на данный момент только язык C++, то выбор был не сильно большой.
+          Начать было решено с фреймворка WXWidgets. Тогда я ещё не представлял,
+          что буду с этими проектами выступать на научной конференции,
+          проводимой моим вузом - РТУ МИРЭА, под названием "Цифровизация
+          техносферы - научный подход"
+        </h1>
+        <h2>
+          Начать было решено с чего-то простого и понятного, поэтому первым моим
+          GUI проектом, а также и первым проектом в докладе к конференции стал
+          калькулятор определителей матриц.
+        </h2>
+        <div class="conference-image-container">
+          <img
+            src="../images/conference-matrix-start.png"
+            alt="Интерфейс стартового приложения"
+          />
+          <h4>
+            Рис. 1 Интерфейс стартового приложения калькулятора определителей
+            матриц с выбором размерности матрицы
+          </h4>
+        </div>
+        <p>Функция при клике на одну из кнопок в стартовом меню</p>
+        <div class="code">
+          <pre>
+            <code>
+void cMain::OnButton2Clicked(wxCommandEvent &amp;evt)
+{
+    flag = 2;
+    text1 = new wxTextCtrl(this, 100, "", wxPoint(100,100), wxSize(100,100));
+    text2 = new wxTextCtrl(this, 101, "", wxPoint(100,200), wxSize(100,100));
+    text3 = new wxTextCtrl(this, 102, "", wxPoint(200,100), wxSize(100,100));
+    text4 = new wxTextCtrl(this, 103, "", wxPoint(200,200), wxSize(100,100));
+    text_ctrl1 = new wxTextCtrl(this, 2000, wxEmptyString, wxPoint(500,150), wxSize(200,200),wxTE_READONLY);
+    button1 -&gt; Hide();
+    button2 -&gt; Hide();
+    button3 -&gt; Show();
+}
+
+            </code>
+          </pre>
+        </div>
+        <div class="conference-image-container">
+          <img
+            src="../images/conference-matrix-work.gif"
+            alt="Принцип работы калькулятора"
+          />
+          <h4>Рис. 2 Принцип работы калькулятора</h4>
+        </div>
+        <h2>
+          Следующим проектом как ни странно стал так называемый "скример",
+          практический интерес в нём был в отслеживании движений мыши
+          пользователя, а также вывод картинки и воспроизведение звука. <br />
+          Скример (от англ. «scream» — крик, он же «кричалка», «пугач»,
+          пугалка) — разновидность шок-контента, основанная на элементе
+          неожиданности, призванная запугать зрителя до смерти. Представляет
+          собой жестокий розыгрыш в Интернете, где ты сначала смотришь видео
+          (или играешь в игру), а потом выскакивает ужастик.
+        </h2>
+        <p>
+          Основная функция, запускающаяся, когда курсор пользователя входит в
+          определённую область
+        </p>
+        <div class="code">
+          <pre>
+            <code>
+void cMain::OnWindowLeave(wxMouseEvent &amp;evt)
+{
+    wxSound("Untitled.wav").Play(wxSOUND_ASYNC|wxSOUND_LOOP);
+    wxClientDC dc(this-&gt;pan1);
+    pan1-&gt;Show();
+    int w,h;
+    this-&gt;SetSize(1920,1080);
+    wxMemoryDC mdc;
+    dc.GetSize(&amp;w, &amp;h);
+    wxImage img(wxT("scr.jpg"), wxBITMAP_TYPE_JPEG);
+    wxBitmap logo(img.Scale(w,h,wxIMAGE_QUALITY_HIGH));
+    mdc.SelectObject(logo);
+    dc.Blit(0,0, logo.GetWidth(), logo.GetHeight(), &amp;mdc, 0, 0,wxCOPY, 0);
+    mdc.SelectObject(wxNullBitmap);
+}
+
+            </code>
+          </pre>
+        </div>
+        <h2>
+          Третим, и последним на конференции проектом (Но не последним GUI
+          проектом! Там ещё много интересного, подробнее в слайдере на странице
+          <a href="about.html">Обо мне</a>) стал не совсем обычный калькулятор.
+          Банально? Не тут-то было, конечно сделать простой, консольный
+          калькулятор на 4 базовые арифметические операции не так уж и сложно. А
+          как насчёт GUI калькулятора, считывающего информацию с кнопок,
+          имеющего все функции стандартного калькулятора, в том числе повтор
+          предыдущей операции, по нажатию на "=", а также полную историю
+          операций, с возможностью вывода значений в основной блок? Кроме того,
+          как было написано выше, калькулятор не совсем простой. Так, я исполнил
+          (наверное?) желание всех калькуляторов мира - возможность оскорблять
+          пользователей, при вводе некорректных значений, вместо постного
+          сообщения об ошибке.
+        </h2>
+        <div class="conference-image-container">
+          <img
+            src="../images/conference-calc-gui.png"
+            alt="Интерфейс калькулятора"
+          />
+          <h4>Рис. 3 Интерфейс калькулятора</h4>
+        </div>
+        <p>
+          Код реализации истории операций, да, переменный могут называться на
+          русском!
+        </p>
+        <div class="code">
+          <pre>
+            <code>
+              this-&gt;История-&gt;Anchor = static_cast&lt;System::Windows::Forms::AnchorStyles&gt;((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+              this-&gt;История-&gt;Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+              static_cast&lt;System::Byte&gt;(204)));
+              this-&gt;История-&gt;FormattingEnabled = true;
+              this-&gt;История-&gt;HorizontalScrollbar = true;
+              this-&gt;История-&gt;ItemHeight = 18;
+              this-&gt;История-&gt;Items-&gt;AddRange(gcnew cli::array&lt; System::Object^  &gt;(1) { L"\tИстория" });
+              this-&gt;История-&gt;Location = System::Drawing::Point(786, 9);
+              this-&gt;История-&gt;Name = L"История";
+              this-&gt;История-&gt;Size = System::Drawing::Size(205, 742);
+              this-&gt;История-&gt;TabIndex = 26;
+              this-&gt;История-&gt;Visible = false;
+              this-&gt;История-&gt;DoubleClick += gcnew System::EventHandler(this, &amp;MyForm::lboxclicked);              
+            </code>
+          </pre>
+        </div>
+        <div class="conference-image-container">
+          <img
+            src="../images/conference-calc-repeat.gif"
+            alt="Функция повторения предыдущей операции"
+          />
+          <h4>Рис. 4 Функция повторения предыдущей операции</h4>
+        </div>
+        <div class="conference-image-container">
+          <img
+            src="../images/conference-calc-callback.gif"
+            alt="Функция вызова финального значения из истории операций"
+          />
+          <h4>Рис. 5 Функция вызова финального значения из истории операций</h4>
+        </div>
+        <h2>
+          Доклад был записан в видеоформате, и выложен на официальном канале
+          youtube
+        </h2>
+        <div class="conference-image-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/OBCl8ZziKdo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <h4>Видео 1 Доклад на конференции</h4>
+        </div>
+        <h2>Ниже можно скачать мою презентацию и статью к конференции</h2>
+        <div class="file-container">
+          <div class="pp">
+            <img
+              src="../images/conference-pp-logo.jpg"
+              alt="powerpoint logo"
+              width="100"
+            />
+            <div class="conference-download-container">
+              <p>Презентация к конференции</p>
+              <a
+                href="../files/ГегияДавит.Графические приложения в c++.Презентация.pptx"
+                ><button class="download-button">СКАЧАТЬ</button></a
+              >
+            </div>
+          </div>
+          <div class="word">
+            <img
+              src="../images/conference-word-logo.png"
+              alt="word logo"
+              width="100"
+            />
+            <div class="conference-download-container">
+              <p>Статья к конференции</p>
+              <a
+                href="../files/ГегияДавит.Графические приложения в c++.Статья.docx"
+                ><button class="download-button">СКАЧАТЬ</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-main">
+          <a href="main.html">На главную</a>
+        </div>
+        <div class="footer-about">
+          <a href="about.html">Коротко обо мне</a>
+        </div>
+        <div class="footer-uni">
+          <a href="university.html">Университет</a>
+        </div>
+        <div class="footer-conf">
+          <a href="conference.html">Конференция "цифровизация техносферы"</a>
+        </div>
+        <div class="footer-job">
+          <a href="work.html">Работа IT специалистом</a>
+        </div>
+        <div class="footer-contact">
+          <div>
+            <a href="https://www.facebook.com/david.gegiya" target="_blank"
+              ><img src="../images/facebook-logo.png" alt="facebook logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/davidaa_wow123/" target="_blank"
+              ><img src="../images/instagram-logo.jpg" alt="instagram logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://vk.com/davidaawow" target="_blank"
+              ><img src="../images/vk-logo.jpg" alt="vkontakte logo"
+            /></a>
+          </div>
+          <div>
+            <a href="mailto:davidik.gegiya@gmail.com" target="_blank"
+              ><img src="../images/gmail-logo.png" alt="gmail logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://github.com/DavidaaWoW" target="_blank"
+              ><img src="../images/github-logo.png" alt="github logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

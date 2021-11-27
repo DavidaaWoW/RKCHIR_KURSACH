@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../work.css" />
+    <link rel="shortcut icon" href="../icon.jpg" />
+    <title>Сайт Гегия Давита</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header_flex">
+        <div class="logo">
+          <a href=""><img src="../images/logo.jpg" alt="logo image" /></a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li class="menu-button">
+              <script src="../scripts/mobile-menu.js"></script>
+              <button onclick="mobilemenuShow()">
+                <img src="../images/menu-icon.png" alt="menu icon" />
+              </button>
+              <ul class="menu-hideable">
+                <li>
+                  <button onclick="mobilemenuHide()" class="mobile-menu-exit">
+                    <img
+                      src="../images/close-mobile-menu.jpg"
+                      alt=""
+                      width="32"
+                      height="32"
+                    />
+                  </button>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="main.html">На главную!</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="about.html">Коротко обо мне</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="university.html">Университет</a>
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="conference.html"
+                    >Конференция "цифровизация техносферы"</a
+                  >
+                </li>
+                <li class="mobile-menu-border">
+                  <a href="work.html">Работа IT специалистом</a>
+                </li>
+                <li>
+                  <button
+                    class="contact-button mobile-contact"
+                    onclick="openContacts()"
+                  >
+                    Контакты
+                  </button>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="main.html">На главную!</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="about.html">Коротко обо мне</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="university.html">Университет</a>
+            </li>
+            <li class="menu-item item-shape">
+              <a href="conference.html"
+                >Конференция "цифровизация техносферы"</a
+              >
+            </li>
+            <li class="menu-item item-shape">
+              <a href="work.html">Работа IT специалистом</a>
+            </li>
+            <li class="menu-item">
+              <button class="contact-button" onclick="openContacts()">
+                Контакты
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="contacts-wrapper">
+        <div class="contacts">
+          <div class="contacts-close">
+            <button class="contacts-button" onclick="closeContacts()">
+              <img
+                src="../images/close-mobile-menu.jpg"
+                alt="close-icon"
+                width="64"
+                height="64"
+              />
+            </button>
+          </div>
+          <div class="contacts-links">
+            <h2>Со мной можно всегда связаться по email:</h2>
+            <a href="mailto:davidik.gegiya@gmail.com"
+              >davidik.gegiya@gmail.com</a
+            >
+          </div>
+          <div class="contacts-links">
+            <h2>Или написать во вконтакте:</h2>
+            <a href="https://vk.me/davidaawow">Тык!</a>
+          </div>
+          <h2>Ну или же заполнить форму обратной связи ниже...</h2>
+          <div class="feedback-form">
+            <div class="feedback-text">
+              <h4>
+                Имя/Фамилия
+                <div class="sign">*</div>
+              </h4>
+              <input class="js-name" type="text" />
+              <h4>
+                Email
+                <div class="sign">*</div>
+              </h4>
+              <input class="js-mail" type="text" />
+              <h4>
+                Сообщение:
+                <div class="sign">*</div>
+              </h4>
+              <textarea
+                class="js-message"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <button class="contact-button feedback-button" onclick="send()">
+              Отправить!
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container work">
+        <h1>
+          Летом 2021 года я устроился на работу. Компания занималась nocode
+          разработкой мобильных приложений на системе Adalo, которая
+          предоставляла возможность создавать кроссплатформенные приложения на
+          графическом конструкторе. Но как всегда бывает во всех nocode
+          решениях, они не очень гибкие. К тому же бекэнд не был предусмотрен
+          совсем. Поэтому моими задачами были как раз всё, что связано с кодом,
+          а также nocode бекэнд интеграция. Компоненты писались на языке
+          программирования Javascript на фреймворке React+React native. А бекэнд
+          интеграция осуществлялась с помощью сервиса Integromat.
+        </h1>
+        <p>
+          Одной из задач бекэнда была обработка фотографий, чтобы они не весили
+          много. Но фотографии нужно было где-то хранить, было решено выбрать
+          неограниченный корпоративный Google Drive. А чтобы всё было
+          структурировано, было решено создавать отдельную ячейку в "базе" под
+          пользователя, которая представляла из себя по сути папку с названием в
+          виде уникального email-а пользователя. Так, по webhook-у в интегромат
+          попадал email и он, на основе его создавал директорию и подпапки в
+          ней.
+        </p>
+        <div class="work-image-container">
+          <img
+            src="../images/work-basecreate.png"
+            alt="Сценарий создания базы под пользователей"
+          />
+          <h4>Рис. 1 Сценарий создания базы под пользователя</h4>
+        </div>
+        <p>
+          Ниже представлен сам обработчик фотографий. Первым элементом стоит
+          триггер, который срабатывает каждый раз, как в базе фотографий, внутри
+          адало появляется новая запись. Ссылку на фотографию, загруженную в
+          базу адало получает модуль http запросов, который её скачивает. Тут же
+          стоит автоматический обработчик исключений, который в случае ошибки
+          просто игнорирует её, не давая сценарию сломаться. Далее идут модули
+          поиска в google drive, которые сначала ищут в базе уже ранее созданную
+          директорию под пользователя и необходимую подпапку в ней. Затем идут
+          модули-обработчики фотографий, первый изменяет формат на JPG, а второй
+          обрезает до максимальной ширины в 400 пикселей. Затем идёт модуль
+          загрузки на Google drive, который в уже найденную директорию загружает
+          обработанное изображение, здесь также стоит обработчик исключений. А
+          затем в базе адало просто меняется ссылка на изображение для
+          отображения, с внутренней базы, на внешнюю на диске.
+        </p>
+        <div class="work-image-container">
+          <img
+            src="../images/work-images.png"
+            alt="Сценарий обработки изображений"
+          />
+          <h4>Рис. 2 Сценарий обработки изображений</h4>
+        </div>
+        <p>
+          Следующей задачей было создание возможности для ресторанов и магазинов
+          загружать свой прайс-лист сразу в виде CSV файлов. Первым модулем
+          является webhook, который получает ссылку на CSV файл. Следом идёт
+          модуль HTTP, который загружает файл. Однако, по какой-то причине,
+          загруженному файлу присваевается расширение .bin, поэтому
+          дополнительно приходится загружать его на диск и снова скачивать.
+          Следующий модуль - конвертация кодирования, так как русский шрифт
+          приходил поломанным из адало. Затем идёт модуль для парсинга CSV,
+          который просто вынимает информацию и распределяет её по колонкам. Ну и
+          под конец, информация просто попадает в необходимые строки в базе
+          данных. Более того, данный сценарий способен даже создавать связи
+          между элементами. Так, в прайс-листе одновременно есть товары и
+          категории, а модуль уже самостоятельно устанавливает между ними связи.
+        </p>
+        <div class="work-image-container">
+          <img
+            src="../images/work-csv.png"
+            alt="Сценарий обработки CSV файлов"
+          />
+          <h4>Рис. 3 Сценарий обработки CSV файлов</h4>
+        </div>
+        <h2>
+          Кастомный компонент в адало, состоит из двух частей: manifest.json,
+          который отвечает за все входные поля, которые заполняются уже в
+          визуальном конструкторе, и index.js, который пишется на react, и в
+          котором описывается основная логика компонента.
+        </h2>
+        <p>
+          Структура manifest.json, из компонента, под названием
+          NotEnoughLogicFunctions, который представляет из себя модуль с
+          логическими операциями, которых почему-то до сих пор нет в адало
+        </p>
+        <div class="code">
+          <pre>
+                <code>
+                    {
+                        "displayName": "NotEnoughLogicFunctions",
+                        "defaultWidth": 160,
+                        "defaultHeight": 24,
+                        "components": "./index.js",
+                        "icon": "./logo.png",
+                        "props": [
+                          {
+                            "name": "color",
+                            "displayName": "Color",
+                            "type": "color",
+                            "default": "#00A898"
+                          },
+                          {
+                            "name": "fontsize",
+                            "displayName": "Font size",
+                            "type": "number",
+                            "default": 14
+                          },
+                          {
+                            "name": "fontstyle",
+                            "displayName": "Font style",
+                            "default": "normal",
+                            "control":{
+                              "type": "menu",
+                              "options":[
+                                {"label": "normal", "value": "normal"},
+                                {"label": "italic", "value": "italic"},
+                                {"label": "oblique", "value": "oblique"}
+                              ]
+                            }
+                          },
+                          {
+                            "name": "fontweight",
+                            "displayName": "Font weight",
+                            "default": "normal",
+                            "control":{
+                              "type": "menu",
+                              "options":[
+                                {"label": "normal", "value": "normal"},
+                                {"label": "bold", "value": "bold"},
+                                {"label": "bolder", "value": "bolder"},
+                                {"label": "lighter", "value": "lighter"}
+                              ]
+                            }
+                          },
+                          {
+                            "name": "textalign",
+                            "displayName": "Text align",
+                            "default": "left",
+                            "control":{
+                              "type": "menu",
+                              "options":[
+                                {"label": "center", "value": "center"},
+                                {"label": "left", "value": "left"},
+                                {"label": "right", "value": "right"}
+                              ]
+                            }
+                          },
+                          {
+                            "name": "textaction",
+                            "displayName": "Click actions",
+                            "type": "action",
+                            "arguments":[
+                              {
+                                "type": "text",
+                                "displayName": "TextOutput"
+                              },
+                              {
+                                "type": "number",
+                                "displayName": "NumberOutput"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "textactionmoment",
+                            "displayName": "Moment Actions",
+                            "type": "action",
+                            "arguments":[
+                              {
+                                "type": "text",
+                                "displayName": "TextOutput"
+                              },
+                              {
+                                "type": "number",
+                                "displayName": "NumberOutput"
+                              }
+                            ]
+                          }
+                        ],
+                        "childComponents": [
+                          {
+                            "name": "fif",
+                            "displayName": "If",
+                            "props": [
+                              {
+                                "name": "firstvarfirstcon",
+                                "displayName": "First variable first condition",
+                                "type": "text"
+                              },
+                              {
+                                "name": "firstvarlogic",
+                                "displayName": "Logic function",
+                                "control":{
+                                  "type": "menu",
+                                  "options": [
+                                    { "label": "Equals \"=\"", "value": "fequals" },
+                                    { "label": "Not equals \"!=\"", "value": "fnequals"},
+                                    { "label": "Greater than \"&gt;\"", "value": "fgthan"},
+                                    { "label": "Greater or equals \"≥\"", "value": "fgthane"},
+                                    { "label": "Less than \"&lt;\"", "value": "flthan"},
+                                    { "label": "Less than, or equals \"≤\"", "value": "flthane"}
+                                  ]
+                                },
+                                "default": "fequals"
+                              },
+                              {
+                                "name": "firstvarsecondcon",
+                                "displayName": "First variable second condition",
+                                "type": "text"
+                              },
+                              {
+                                "name": "middlelogic",
+                                "displayName": "Logic function",
+                                "control":{
+                                  "type": "menu",
+                                  "options": [
+                                    { "label": "AND", "value": "andf" },
+                                    { "label": "OR", "value": "orf" },
+                                    { "label": "NAND", "value": "nandf" },
+                                    { "label": "NOR", "value": "norf" },
+                                    { "label": "XOR", "value": "xorf" },
+                                    { "label": "XNOR", "value": "xnorf" }
+                                  ]
+                                },
+                                "default": "andf"
+                              },
+                              {
+                                "name": "secondvarfirstcon",
+                                "displayName": "Second variable first condition",
+                                "type": "text"
+                              },
+                              {
+                                "name": "secondvarlogic",
+                                "displayName": "Logic function",
+                                "control":{
+                                  "type": "menu",
+                                  "options": [
+                                    { "label": "Equals \"=\"", "value": "sequals" },
+                                    { "label": "Not equals \"!=\"", "value": "snequals"},
+                                    { "label": "Greater than \"&gt;\"", "value": "sgthan"},
+                                    { "label": "Greater or equals \"≥\"", "value": "sgthane"},
+                                    { "label": "Less than \"&lt;\"", "value": "slthan"},
+                                    { "label": "Less than, or equals \"≤\"", "value": "slthane"}
+                                  ]
+                                },
+                                "default": "sequals"
+                              },
+                              {
+                                "name": "secondvarsecondcon",
+                                "displayName": "Second variable second condition",
+                                "type": "text"
+                              },
+                              {
+                                "name": "ifout",
+                                "displayName": "If output",
+                                "type": "text",
+                                "default": "Text"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "felse",
+                            "displayName": "Else",
+                            "props": [
+                              { "name": "enabled", "type": "boolean", "default": false },
+                              {
+                                "name": "elseout",
+                                "displayName": "Else output",
+                                "type": "text"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "visible",
+                            "displayName": "Visible?",
+                            "props":[
+                              { "name": "enabled", "type": "boolean", "default": true }
+                            ]
+                          }
+                        ]
+                      }
+                </code>
+            </pre>
+        </div>
+        <div class="work-image-container">
+          <img
+            src="../images/work-component-manifest.png"
+            alt="Внешний вид полей, обозначеных в manifest.json"
+          />
+          <h4>Рис. 4 Внешний вид полей, обозначеных в manifest.json</h4>
+        </div>
+        <p>
+          Сам код включать не буду, т.к. компонент является моей собственностью
+          и всё ещё продаётся другим пользователям adalo. По сути, всё, что
+          компонент делает, это имитирует структуру ветвления, типа:
+        </p>
+        <div class="code">
+          <pre>
+                  <code>
+if((a EQUALITYFUNCTION b) LOGICFUNCTION (c EQUALITYFUNCTION d) ){
+
+}
+else{
+
+}
+                  </code>
+              </pre>
+        </div>
+        <p>
+          где a,b,c,d - числовые, или строковые переменные, EQUALITYFUNCTION -
+          функции сравнения чисел, строк, или строк с числами (&gt;, &lt;,
+          &gt;=, &lt;=, ==, !=), а LOGICFUNCTION - логические функции (AND, OR,
+          NAND, NOR, XOR, XNOR)
+        </p>
+        <h2>
+          Кроме того, одной из моих задач был data scrapping, с сайтов, которые
+          заказали приложение, но у которых не было готового CSV файла с базой
+          данных. Сначала я пытался решить задачу всё на том же Integromat-е,
+          однако это оказалось нецелесообразно как по затраченному времени, так
+          и по финансам. Поэтому, было принято решение писать парсер на языке
+          Python, несмотря на то, что я, до этого момента с ним не работал.
+          Однако, после более низкоуровневых языков, Python оказался простым,
+          даже слишком простым, только с непонятной структурой кода.
+        </h2>
+        <p>
+          Пример кода, парсера html страницы, в целях конфиденциальности,
+          адресат запросов был скрыт. Парсинг происходил в два этапа: парсинг
+          основной информации и парсинг изображений.
+        </p>
+        <div class="code">
+          <pre>
+                <code>
+from os import write
+import requests
+from bs4 import BeautifulSoup
+import csv
+import re
+
+URL = 'https://XXXXXXXXX/XXXXXX/'
+HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 YaBrowser/21.6.4.693 Yowser/2.5 Safari/537.36'}
+HOST = 'https://XXXXXXXX.ru'
+cars = []
+
+def get_html(url, params=None):
+    r = requests.get(url, headers=HEADERS, params=params)
+    return r
+
+def somefunc(tag):
+    if tag.has_attr('itemprop'):
+        if tag.get('itemprop') == 'brand':
+            return True
+        else:
+            return False
+    else:
+        return False
+
+def get_content(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    items = soup.find_all('div', class_='item-tale')
+    
+    for item in items:
+        curr_link = HOST + item.find('div', class_='img').find_next('a').get('href')
+        html2 = get_html(curr_link)
+        soup2 = BeautifulSoup(html2.text, 'html.parser')
+
+        first_img = HOST + item.find('div', class_='img').find_next('a').find_next('img').get('src')
+        title = item.find('div', class_='description').find_next('a').get_text(strip = True).replace('AT', '')
+        spec = item.find('ul', class_='specifications').find_all('li')
+        spec1 = spec[0].find('b').get_text()
+        spec2 = spec[1].find('b').get_text()
+        if(len(spec)&gt;2):
+            spec3 = spec[2].find('b').get_text()
+        else:
+            spec3 = ''
+        if(len(spec)&gt;3):
+            spec4 = spec[3].find('b').get_text()
+        else:
+            spec4 = ''
+        price = item.find('div', class_='total').get_text(strip = True).replace('Итого: ', '').replace('&lt;span&gt; за 1 сутки&lt;/span&gt;', '').replace('₽', '').replace(' ', '').replace('за1сутки', '')
+        brand = soup2.find(somefunc).get('content')
+        opt = soup2.find_all('div', class_='option')
+        opt1 = opt[0].find('div', class_='price').find_next('div', class_='price').get_text()
+        opt2 = opt[1].find('div', class_='price').find_next('div', class_='price').get_text()
+        opt3 = opt[2].find('div', class_='price').find_next('div', class_='price').get_text()
+        opt4 = opt[3].find('div', class_='price').find_next('div', class_='price').get_text()
+        opt5 = opt[4].find('div', class_='price').find_next('div', class_='price').get_text()
+        opt6 = opt[5].find('div', class_='price').find_next('div', class_='price').get_text()
+
+        text = soup2.find('div', class_='text').get_text()
+        text1 = soup2.find('div', class_='text').find_all('h2')
+        text2 = soup2.find('div', class_='text').find_all('p')
+
+
+
+        complecion = ''
+        complecion = soup2.find('div', class_='equipment')
+        if complecion:
+            complecion = complecion.find('div', class_='title').find_next('ul').find_all('li')
+            #print(len(complecion))
+            co1 = complecion[0].get_text()
+            co2 = complecion[1].get_text()
+            co3 = complecion[2].get_text()
+            co4 = complecion[3].get_text()
+            if len(complecion) &gt; 4:
+                co5 = complecion[4].get_text()
+            else:
+                co5 = ''
+            if len(complecion) &gt; 5:
+                co6 = complecion[5].get_text()
+            else:
+                co6 = ''
+            if len(complecion) &gt; 6:
+                co7 = complecion[6].get_text()
+            else:
+                co7 = ''
+            if len(complecion) &gt; 7:
+                co8 = complecion[7].get_text()
+            else:
+                co8 = ''
+            if len(complecion) &gt; 8:
+                co9 = complecion[8].get_text()
+            else:
+                co9 = ''
+            if len(complecion) &gt; 9:
+                co10 = complecion[9].get_text()
+            else:
+                co10 = ''
+            if len(complecion) &gt; 10:
+                co11 = complecion[10].get_text()
+            else:
+                co11 = ''
+            if len(complecion) &gt; 11:
+                co12 = complecion[11].get_text()
+            else:
+                co12 = ''
+            if len(complecion) &gt; 12:
+                co13 = complecion[12].get_text()
+            else:
+                co13 = ''
+            if len(complecion) &gt; 13:
+                co14 = complecion[13].get_text()
+            else:
+                co14 = ''
+            if len(complecion) &gt; 14:
+                co15 = complecion[14].get_text()
+            else:
+                co15 = ''
+            if len(complecion) &gt; 15:
+                co16 = complecion[15].get_text()
+            else:
+                co16 = ''
+            if len(complecion) &gt; 16:
+                co17 = complecion[16].get_text()
+            else:
+                co17 = ''
+            if len(complecion) &gt; 17:
+                co18 = complecion[17].get_text()
+            else:
+                co18 = ''
+            if len(complecion) &gt; 18:
+                co19 = complecion[18].get_text()
+            else:
+                co19 = ''
+            if len(complecion) &gt; 19:
+                co20 = complecion[19].get_text()
+            else:
+                co20 = ''
+            if len(complecion) &gt; 20:
+                co21 = complecion[20].get_text()
+            else:
+                co21 = ''
+            if len(complecion) &gt; 21:
+                co22 = complecion[21].get_text()
+            else:
+                co22 = ''
+            if len(complecion) &gt; 22:
+                co23 = complecion[22].get_text()
+            else:
+                co23 = ''
+            if len(complecion) &gt; 23:
+                co24 = complecion[23].get_text()
+            else:
+                co24 = ''
+            if len(complecion) &gt; 24:
+                co25 = complecion[24].get_text()
+            else:
+                co25 = ''
+            if len(complecion) &gt; 25:
+                co26 = complecion[25].get_text()
+            else:
+                co26 = ''
+            if len(complecion) &gt; 26:
+                co27 = complecion[26].get_text()
+            else:
+                co27 = ''
+            if len(complecion) &gt; 27:
+                co28 = complecion[27].get_text()
+            else:
+                co28 = ''
+            if len(complecion) &gt; 28:
+                co29 = complecion[28].get_text()
+            else:
+                co29 = ''
+
+        else:
+            complecion = ''
+            co1 = ''
+            co2 = ''
+            co3 = ''
+            co4 = ''
+            co5 = ''
+            co6 = ''
+            co7 = ''
+            co8 = ''
+            co9 = ''
+            co10 = ''
+            co11 = ''
+            co12 = ''
+            co13 = ''
+            co14 = ''
+            co15 = ''
+            co16 = ''
+            co17 = ''
+            co18 = ''
+            co19 = ''
+            co20 = ''
+            co21 = ''
+            co22 = ''
+            co23 = ''
+            co24 = ''
+            co25 = ''
+            co26 = ''
+            co27 = ''
+            co28 = ''
+            co29 = ''
+
+        cars.append({
+            'title': title,
+            'first_img': first_img,
+            'spec1': spec1,
+            'spec2': spec2,
+            'spec3': spec3,
+            'spec4': spec4,
+            'price': price,
+            'brand': brand,
+            'opt1': opt1,
+            'opt2': opt2.replace('+ ', '').replace(' ', '').replace('₽', ''),
+            'opt3': opt3.replace('+ ', '').replace(' ', '').replace('₽', ''),
+            'opt4': opt4.replace('+ ', '').replace(' ', '').replace('₽', ''),
+            'opt5': opt5.replace('+ ', '').replace(' ', '').replace('₽', ''),
+            'opt6': opt6.replace('+ ', '').replace(' ₽/км', ''),
+            'co1': co1,
+            'co2': co2,
+            'co3': co3,
+            'co4': co4,
+            'co5': co5,
+            'co6': co6,
+            'co7': co7,
+            'co8': co8,
+            'co9': co9,
+            'co10': co10,
+            'co11': co11,
+            'co12': co12,
+            'co13': co13,
+            'co14': co14,
+            'co15': co15,
+            'co16': co16,
+            'co17': co17,
+            'co18': co18,
+            'co19': co19,
+            'co20': co20,
+            'co21': co21,
+            'co22': co22,
+            'co23': co23,
+            'co24': co24,
+            'co25': co25,
+            'co26': co26,
+            'co27': co27,
+            'co28': co28,
+            'co29': co29,
+            'text': text,
+        })
+        print(cars)
+        spec3 = ''
+        spec4 = ''
+
+def save_file(items,path):
+    with open(path, 'a', newline='') as file:
+        writer = csv.writer(file, delimiter=';')
+        #writer.writerow(['title', 'first img', 'spec1', 'spec2', 'spec3', 'spec4', 'price', 'brand', 'opt1', 'opt2', 'opt3', 'opt4', 'opt5', 'opt6', 'co1', 'co2', 'co3', 'co4', 'co5', 'co6', 'co7', 'co8', 'co9', 'co10', 'co11', 'co12', 'co13', 'co14', 'co15', 'co16', 'co17', 'co18', 'co19', 'co20', 'co21', 'co22', 'co23', 'co24', 'co25', 'co26', 'co27', 'co28', 'co29', 'text', 'brand'])
+        for item in items:
+            writer.writerow([item['title'], item['first_img'], item['spec1'], item['spec2'], item['spec3'], item['spec4'], item['price'],  item['brand'], item['opt1'], item['opt2'], item['opt3'], item['opt4'], item['opt5'], item['opt6'], item['co1'], item['co2'], item['co3'], item['co4'], item['co5'], item['co6'], item['co7'], item['co8'], item['co9'], item['co10'], item['co11'], item['co12'], item['co13'], item['co14'], item['co15'], item['co16'], item['co17'], item['co18'], item['co19'], item['co20'], item['co21'], item['co22'], item['co23'], item['co24'], item['co25'], item['co26'], item['co27'], item['co28'], item['co29'], item['text'], 'vip'])
+
+def parse():
+    html = get_html(URL)
+    if html.status_code == 200:
+        get_content(html.text)
+        save_file(cars, 'cars.csv')
+        print('Success!')
+    else:
+        print('Error')
+
+parse()
+                </code>
+            </pre>
+        </div>
+        <div class="code">
+          <pre>
+                <code>
+from os import write
+import requests
+from bs4 import BeautifulSoup
+import csv
+import re
+
+URL = 'https://XXXXXXXXX.ru/'
+HEADERS = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 YaBrowser/21.6.4.693 Yowser/2.5 Safari/537.36'}
+HOST = 'https://XXXXXXXXX.ru'
+cars = []
+
+def get_html(url, params=None):
+    r = requests.get(url, headers=HEADERS, params=params)
+    return r
+
+def somefunc(tag):
+    if tag.has_attr('itemprop'):
+        if tag.get('itemprop') == 'brand':
+            return True
+        else:
+            return False
+    else:
+        return False
+
+def get_content(html):
+        html2 = get_html('https://prostoprokat.ru/arenda/prokat-hyundai-solaris-2/')
+        soup2 = BeautifulSoup(html2.text, 'html.parser')
+        images = soup2.find_all('img', class_='slider-detail-item-img')
+        #print(len(images))
+        title = soup2.find('div', class_='order').find('div', class_='name').get_text(strip = True).replace('AT', '')
+        print(images[1])
+        img1 = HOST + images[0].get('data-lazy')
+        img2 = HOST + images[1].get('data-lazy')
+        if len(images)&gt;2:
+            img3 = HOST + images[2].get('data-lazy')
+        else:
+            img3 = ''
+        if len(images)&gt;3:
+            img4 = HOST + images[3].get('data-lazy')
+        else:
+            img4 = ''
+        if len(images)&gt;4:
+            img5 = HOST + images[4].get('data-lazy')
+        else:
+            img5 = ''
+        if len(images)&gt;5:
+            img6 = HOST + images[5].get('data-lazy')
+        else:
+            img6 = ''
+        if len(images)&gt;6:
+            img7 = HOST + images[6].get('data-lazy')
+        else:
+            img7 = ''
+        if len(images)&gt;7:
+            img8 = HOST + images[7].get('data-lazy')
+        else:
+            img8 = ''
+        if len(images)&gt;8:
+            img9 = HOST + images[8].get('data-lazy')
+        else:
+            img9 = ''
+        if len(images)&gt;9:
+            img10 = HOST + images[9].get('data-lazy')
+        else:
+            img10 = ''
+        if len(images)&gt;10:
+            img11 = HOST + images[10].get('data-lazy')
+        else:
+            img11 = ''
+        if len(images)&gt;11:
+            img12 = HOST + images[11].get('data-lazy')
+        else:
+            img12 = ''
+        if len(images)&gt;12:
+            img13 = HOST + images[12].get('data-lazy')
+        else:
+            img13 = ''
+        if len(images)&gt;13:
+            img14 = HOST + images[13].get('data-lazy')
+        else:
+            img14 = ''
+
+        cars.append({
+            'title': title,
+            'img1': img1,
+            'img2': img2,
+            'img3': img3,
+            'img4': img4,
+            'img5': img5,
+            'img6': img6,
+            'img7': img7,
+            'img8': img8,
+            'img9': img9,
+            'img10': img10,
+            'img11': img11,
+            'img12': img12,
+            'img13': img13,
+            'img14': img14,
+        })
+        print(cars)
+
+def save_file(items,path):
+    with open(path, 'a', newline='') as file:
+        writer = csv.writer(file, delimiter=';')
+        #writer.writerow(['title', 'img', 'num' ])
+        for item in items:
+            writer.writerow([item['title'], item['img1'], 1])
+            writer.writerow([item['title'], item['img2'], 2])
+            writer.writerow([item['title'], item['img3'], 3])
+            if item['img4']:
+                writer.writerow([item['title'], item['img4'], 4])
+            if item['img5']:
+                writer.writerow([item['title'], item['img5'], 5])
+            if item['img6']:
+                writer.writerow([item['title'], item['img6'], 6])
+            if item['img7']:
+                writer.writerow([item['title'], item['img7'], 7])
+            if item['img8']:
+                writer.writerow([item['title'], item['img8'], 8])
+            if item['img9']:
+                writer.writerow([item['title'], item['img9'], 9])
+            if item['img10']:
+                writer.writerow([item['title'], item['img10'], 10])
+            if item['img11']:
+                writer.writerow([item['title'], item['img11'], 11])
+            if item['img12']:
+                writer.writerow([item['title'], item['img12'], 12])
+            if item['img13']:
+                writer.writerow([item['title'], item['img13'], 13])
+            if item['img14']:
+                writer.writerow([item['title'], item['img14'], 14])
+
+
+def parse():
+    html = get_html(URL)
+    if html.status_code == 200:
+        get_content(html.text)
+        save_file(cars, 'cars.csv')
+        print('Success!')
+    else:
+        print('Error')
+
+parse()
+                </code>
+            </pre>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-main">
+          <a href="main.html">На главную</a>
+        </div>
+        <div class="footer-about">
+          <a href="about.html">Коротко обо мне</a>
+        </div>
+        <div class="footer-uni">
+          <a href="university.html">Университет</a>
+        </div>
+        <div class="footer-conf">
+          <a href="conference.html">Конференция "цифровизация техносферы"</a>
+        </div>
+        <div class="footer-job">
+          <a href="work.html">Работа IT специалистом</a>
+        </div>
+        <div class="footer-contact">
+          <div>
+            <a href="https://www.facebook.com/david.gegiya" target="_blank"
+              ><img src="../images/facebook-logo.png" alt="facebook logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/davidaa_wow123/" target="_blank"
+              ><img src="../images/instagram-logo.jpg" alt="instagram logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://vk.com/davidaawow" target="_blank"
+              ><img src="../images/vk-logo.jpg" alt="vkontakte logo"
+            /></a>
+          </div>
+          <div>
+            <a href="mailto:davidik.gegiya@gmail.com" target="_blank"
+              ><img src="../images/gmail-logo.png" alt="gmail logo"
+            /></a>
+          </div>
+          <div>
+            <a href="https://github.com/DavidaaWoW" target="_blank"
+              ><img src="../images/github-logo.png" alt="github logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="../scripts/feedback.js"></script>
+</html>

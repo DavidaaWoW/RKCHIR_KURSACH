@@ -1,0 +1,99 @@
+/* Conference */
+.conference {
+  margin-top: 17em;
+}
+
+.conference > h1 {
+  color: #9f9f48;
+  margin-bottom: 3em;
+  padding: 0 5px;
+}
+
+.conference > h2 {
+  color: brown;
+  margin: 2em;
+  padding: 0 5px;
+}
+
+.conference > p {
+  color: brown;
+  margin: 1em 0;
+  padding: 0 5px;
+}
+
+.conference-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.conference-image-container > img {
+  max-width: 50em;
+}
+
+.conference-image-container > h4 {
+  margin: 1em 0;
+  font-size: 1rem;
+}
+
+.pp,
+.word {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  margin-left: 1em;
+}
+
+.conference-download-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2em;
+}
+
+.download-button {
+  color: burlywood;
+  height: 4em;
+  border-radius: 1em;
+  border: none;
+  padding: 0.5em;
+  font-weight: bold;
+  background-color: #5a798e;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  color: #5a798e;
+  background-color: burlywood;
+  box-shadow: inset 0 0 0 3px #efbba8;
+  transition: 0.5s;
+}
+
+/* Media */
+
+@media screen and (max-width: 800px) {
+  .conference-image-container > img,
+  .conference-image-container > iframe {
+    max-width: 40em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .conference-image-container > img,
+  .conference-image-container > iframe {
+    max-width: 30em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .conference-image-container > img,
+  .conference-image-container > iframe {
+    max-width: 15em;
+  }
+
+  html {
+    font-size: 13px;
+  }
+}

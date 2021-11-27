@@ -1,0 +1,60 @@
+/* Work */
+.work {
+  margin-top: 17em;
+}
+
+.work > h1 {
+  color: #9f9f48;
+  margin-bottom: 3em;
+  padding: 0 5px;
+}
+
+.work > h2 {
+  color: brown;
+  margin: 2em;
+  padding: 0 5px;
+}
+
+.work > p {
+  color: brown;
+  margin: 1em 0;
+  padding: 0 5px;
+}
+
+.work-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.work-image-container > img {
+  max-width: 50em;
+}
+
+.work-image-container > h4 {
+  margin: 1em 0;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .work-image-container > img {
+    max-width: 40em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .work-image-container > img {
+    max-width: 30em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .work-image-container > img {
+    max-width: 15em;
+  }
+
+  html {
+    font-size: 13px;
+  }
+}

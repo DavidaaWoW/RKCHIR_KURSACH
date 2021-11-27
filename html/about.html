@@ -1,252 +1,1370 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../about.css" />
-    <link rel="shortcut icon" href="../icon.jpg" />
-    <title>Сайт Гегия Давита</title>
-  </head>
-  <body>
-    <header>
-      <div class="container header_flex">
-        <div class="logo">
-          <a href=""><img src="../images/logo.jpg" alt="logo image" /></a>
-        </div>
-        <nav class="menu">
-          <ul>
-            <li class="menu-button">
-              <script src="../scripts/mobile-menu.js"></script>
-              <button onclick="mobilemenuShow()">
-                <img src="../images/menu-icon.png" alt="menu icon" />
-              </button>
-              <ul class="menu-hideable">
-                <li>
-                  <button onclick="mobilemenuHide()" class="mobile-menu-exit">
-                    <img
-                      src="../images/close-mobile-menu.jpg"
-                      alt=""
-                      width="32"
-                      height="32"
-                    />
-                  </button>
-                </li>
-                <li class="mobile-menu-border">
-                  <a href="main.html">На главную!</a>
-                </li>
-                <li class="mobile-menu-border">
-                  <a href="about.html">Коротко обо мне</a>
-                </li>
-                <li class="mobile-menu-border"><a href="">Университет</a></li>
-                <li class="mobile-menu-border">
-                  <a href="">Конференция "цифровизация техносферы"</a>
-                </li>
-                <li class="mobile-menu-border">
-                  <a href="">Работа IT специалистом</a>
-                </li>
-                <li>
-                  <button class="contact-button mobile-contact">
-                    Контакты
-                  </button>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item item-shape">
-              <a href="main.html">На главную!</a>
-            </li>
-            <li class="menu-item item-shape">
-              <a href="about.html">Коротко обо мне</a>
-            </li>
-            <li class="menu-item item-shape"><a href="">Университет</a></li>
-            <li class="menu-item item-shape">
-              <a href="">Конференция "цифровизация техносферы"</a>
-            </li>
-            <li class="menu-item item-shape">
-              <a href="">Работа IT специалистом</a>
-            </li>
-            <li class="menu-item">
-              <button class="contact-button">Контакты</button>
-            </li>
-          </ul>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../about.css" />
+  <link rel="shortcut icon" href="../icon.jpg" />
+  <title>Сайт Гегия Давита</title>
+</head>
+<script src="../scripts/about.js"></script>
+
+<body onload="hideElements()">
+  <header>
+    <div class="container header_flex">
+      <div class="logo">
+        <a href=""><img src="../images/logo.jpg" alt="logo image" /></a>
       </div>
-    </header>
-    <main>
-      <div class="container about">
-        <h1>История начинается 18 лет назад, в день, когда я родился...</h1>
-        <h2>
-          Это конечно же шутка, раздел ведь называется
-          <span style="text-decoration: underline; color: brown">коротко</span>
-          обо мне.
-        </h2>
-        <p class="about-text">
-          Родился в Грузии, в небольшом городке, под названием Марнеули, в 30км
-          от столицы. Там прожил свои первые 18 лет жизни и окончил школу. С
-          программированием практически не был знаком, лишь на уровне
-          редактирования JSON файлов в любимой игре, считал это скучным и
-          монотонным занятием. Однако в школе всегда были интересны математика с
-          физикой, поэтому выбор профессии сам собой ушёл в техническое русло, а
-          с учётом актуальности специальности, было решено поступать на
-          программную инженерию, в другую страну - Российскую Федерацию. Выбор
-          страны был сделан по многим причинам, основными из них являются
-          качество образования, и тот факт, что русский язык - мой родной. Среди
-          всех возможных университетов, мною был выбран РТУ МИРЭА, именно там и
-          начинается моё погружение в прекрасный и необъятный мир
-          программирования, где я полностью поменял своё мнение относительно
-          скучности данного занятия. Об этом можно подробнее можно прочитать в
-          разделе
-          <a href="">Университет</a>
-        </p>
-        <div class="about-facts">
-          <h1>Несколько фактов обо мне:</h1>
-          <script src="../scripts/about.js"></script>
-          <div class="about-facts-container">
-            <div class="about-facts-flex">
-              <button class="about-facts-button" onclick="factsButtonClick(0)">
-                +
-              </button>
-              <h2>Soft skills, или социальные навыки</h2>
-            </div>
-            <div class="about-facts-text-container">
-              <p class="about-facts-text">
-                В целом я могу себя назвать довольно социальным и крайне
-                неконфликтным человеком. Однако это не значит податливость и
-                мягкотелось, если у меня есть мнение, и я считаю его верным, то
-                я готов его отстаивать, применяя аргументы, и в то же время,
-                готов выслушивать конструктивную критику и всупать в дискуссии.
-                В школьное время участвовал во многих кружках, посещал семинары,
-                ходил в языковые клубы, ездил в летние лагеря, и всё это в
-                условиях, когда люди вокруг вообще не говорили, или говорили в
-                недостаточной степени на моём родном языке. Люблю работать в
-                команде, только в том случае, если сохраняется здоровая
-                атмосфера, а задания конкретно распределены между членами, и
-                конечно же составлен план.
-              </p>
-            </div>
+      <nav class="menu">
+        <ul>
+          <li class="menu-button">
+            <script src="../scripts/mobile-menu.js"></script>
+            <button onclick="mobilemenuShow()">
+              <img src="../images/menu-icon.png" alt="menu icon" />
+            </button>
+            <ul class="menu-hideable">
+              <li>
+                <button onclick="mobilemenuHide()" class="mobile-menu-exit">
+                  <img src="../images/close-mobile-menu.jpg" alt="" width="32" height="32" />
+                </button>
+              </li>
+              <li class="mobile-menu-border">
+                <a href="main.html">На главную!</a>
+              </li>
+              <li class="mobile-menu-border">
+                <a href="about.html">Коротко обо мне</a>
+              </li>
+              <li class="mobile-menu-border"><a href="university.html">Университет</a></li>
+              <li class="mobile-menu-border">
+                <a href="conference.html">Конференция "цифровизация техносферы"</a>
+              </li>
+              <li class="mobile-menu-border">
+                <a href="work.html">Работа IT специалистом</a>
+              </li>
+              <li>
+                <button class="contact-button mobile-contact">
+                  Контакты
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item item-shape">
+            <a href="main.html">На главную!</a>
+          </li>
+          <li class="menu-item item-shape">
+            <a href="about.html">Коротко обо мне</a>
+          </li>
+          <li class="menu-item item-shape"><a href="university.html">Университет</a></li>
+          <li class="menu-item item-shape">
+            <a href="conference.html">Конференция "цифровизация техносферы"</a>
+          </li>
+          <li class="menu-item item-shape">
+            <a href="work.html">Работа IT специалистом</a>
+          </li>
+          <li class="menu-item">
+            <button class="contact-button">Контакты</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container about">
+      <h1>История начинается 18 лет назад, в день, когда я родился...</h1>
+      <h2>
+        Это конечно же шутка, раздел ведь называется
+        <span style="text-decoration: underline; color: brown">коротко</span>
+        обо мне.
+      </h2>
+      <p class="about-text">
+        Родился в Грузии, в небольшом городке, под названием Марнеули, в 30км
+        от столицы. Там прожил свои первые 18 лет жизни и окончил школу. С
+        программированием практически не был знаком, лишь на уровне
+        редактирования JSON файлов в любимой игре, считал это скучным и
+        монотонным занятием. Однако в школе всегда были интересны математика с
+        физикой, поэтому выбор профессии сам собой ушёл в техническое русло, а
+        с учётом актуальности специальности, было решено поступать на
+        программную инженерию, в другую страну - Российскую Федерацию. Выбор
+        страны был сделан по многим причинам, основными из них являются
+        качество образования, и тот факт, что русский язык - мой родной. Среди
+        всех возможных университетов, мною был выбран РТУ МИРЭА, именно там и
+        начинается моё погружение в прекрасный и необъятный мир
+        программирования, где я полностью поменял своё мнение относительно
+        скучности данного занятия. Об этом можно подробнее можно прочитать в
+        разделе
+        <a href="university.html">Университет</a>
+      </p>
+      <div class="about-history">
+        <h3 id="about-history-header">
+          Ниже представлена моя профессиональная история в виде слайдера
+        </h3>
+        <div class="about-history-slider">
+          <button class="about-history-slider-button-left" onclick="onLeftButtonClick()">
+            <img src="../images/arrow-left.png" alt="left-arrrow" />
+          </button>
+          <button class="about-history-slider-button-right" onclick="onRightButtonClick()">
+            <img src="../images/arrow-right.png" alt="right-arrow" />
+          </button>
+          <h2>
+            Начиналось всё с дисциплины "процедурное программирование", в
+            первом семестре. Она включала в себя знакомство с языком c++, и с
+            принципами программирования в целом.
+          </h2>
+          <p>
+            Конечно сначала был "Hello world!", но затем пошли задачки
+            посложнее. Вот например задача с алгоритмическим поиском
+            приблизительного значения функции.
+          </p>
+          <div class="code">
+            <pre>
+                <code>
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+setlocale (LC_ALL, "Russian"); //локализируем консоль
+float r,m,S,n,a,p,f; //вводим переменные
+r = 0.2; //выбираем случайное значение r, с которым в дальнейшем будем сравнивать получившееся значение
+//сообщаем пользователю уравнение и просим ввести переменные
+cout << "Базовое уравнение:m = (Sr(1+r)^n) / (12((1+r)^n - 1)), r = p / 100" << endl;
+cout << "Введите числа m,S и n" << endl;
+cin >> m >> S >> n;
+//используя переменные и случайное число r вычисляем число a
+a = (S * r * pow(1+r,n)) / (12 * (pow(1+r,n) - 1));
+//вычисляем разность f - число по модулю, разность между ожидаемым m и фактическим a
+f = abs(m - a);
+if (f < 0.001) //если очень повезло, и мы сразу угадали ответ - выводим его, можно также играться с требуемой точностью
+{
+    p = r * 100;
+    cout << "Процент p равен: " << p << "%" << endl;
+    return 0;
+}
+else
+{
+    for (r = 0.01; r < 1; r += 0.00001) //в случае, если погрешность между фактическим и требуемым значением превышает заданное значение - начинаем поиск постепенно изменяя случайное число r, опять подставляя и сравнивая, при более низкой точности программа выполняется быстрее, но есть шанс того, что она не найдёт в диапазоне проверки нужное значение
+    {
+        a = (S * r * pow(1+r,n)) / (12 * (pow(1+r,n) - 1));
+        f = abs(m - a);
+        if (f < 0.001)
+        {
+            p = r * 100;
+            cout << "Процент p равен: " << p << "%" << endl;
+            return 0;
+        }
+    }
+}
+//если программа дошла до этого момента - значит она не смогла найти ответ.
+    cout << "Неправильно введены данные";
+    return 0;
+}
+                </code>
+              </pre>
           </div>
-          <div class="about-facts-container">
-            <div class="about-facts-flex">
-              <button class="about-facts-button" onclick="factsButtonClick(1)">
-                +
-              </button>
-              <h2>Увлечения, хобби</h2>
-            </div>
-            <div class="about-facts-text-container">
-              <p class="about-facts-text">
-                Основным своим хобби, которым я увлекаюсь с пяти лет, я считаю
-                шахматы. Так, за моими плечами десятки региональных,
-                национальных и международных турниров, медали и кубки с
-                чемпионатов всех уровней, международный рейтинг шахматной
-                федерации ФИДЕ, и тысячи часов проведённых за увлекательнейшими
-                партиями, с разными контролями времени. <br />
-                Невозможно также не выделить программирование. Хоть оно и
-                преодолело уровень хобби, и перешло в статус работы и карьеры,
-                оно всё ещё приносит мне невероятное удовольствие, и я могу
-                заниматься даже собственными проектами в свободное от учёбы и
-                работы время. <br />
-                Из менее значимых увлечений можно выделить мою бесконечную
-                любовь к истории с географией. Нравится также читать и
-                размышлять о политике и социально значимых и актуальных темах.
-                Ну и отдельное место в моём сердце занимают настольные игры.
-              </p>
-            </div>
+          <p>
+            А вот ещё забавная задача на декодирование римских чисел.
+          </p>
+          <div class="code">
+            <pre>
+                <code>
+//6 задача Декодировать римскую запись числа, состоящего из любого количества знаков.
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+int correct_enter(string c) //функция проверки правильности ввода, получает введённую строку
+{
+    //выполняем действия для перевода из строки в символьный массив - более подробно описано в основной функции - main
+    int a = c.length(); 
+    char enter_c[a];
+    strcpy(enter_c, c.c_str());
+    char roman[] = {'I','V','X','L','C','D','M'};
+    int k = 0; //вводим переменную счётчик, под конец сравниваем её с длинной массива, если они равны - то введенное число существует
+    for (int i = 0; i&lt;a;i++) // если хоть одно условие выполняется - от k отнимается единица, соответственно под конец оно не будет равно длинне массива, а значит введённое число некорректно
+    {
+    if(enter_c[i - 3] == 'I' &amp;&amp; enter_c[i - 2] == 'I' &amp;&amp; enter_c[i - 1] == 'I' &amp;&amp; enter_c[i] == 'I') //сравниваем 4 подряд идущие I
+        k -= 1;
+    else if(enter_c[i] == 'X' &amp;&amp; enter_c[i - 1] == 'X' &amp;&amp; enter_c[i - 2] == 'X' &amp;&amp; enter_c[i-3] == 'X') //сравниваем 4 подряд идущие X
+        k -= 1;
+    else if(enter_c[i] == 'C' &amp;&amp; enter_c[i - 1] == 'C' &amp;&amp; enter_c[i - 2] == 'C' &amp;&amp; enter_c[i - 3] == 'C') //сравниваем 4 подряд идущие C
+        k -= 1;
+    else if(enter_c[i] == 'X' &amp;&amp; enter_c[i - 1] == 'I' &amp;&amp; enter_c[i - 2] == 'I') //проверка на IIX
+        k -= 1;
+    else if((enter_c[i] == 'X' || 'V' || 'C' || 'L' || 'D' || 'M') &amp;&amp; (enter_c[i - 1] == 'X' || 'V' || 'L' || 'C' || 'D' || 'M') &amp;&amp; (enter_c[i - 2] == 'I')) //проверка на IXX/iVV и т.д
+        k -= 1;
+    else if((enter_c[i] == 'V' &amp;&amp; enter_c[i - 1] == 'V') || (enter_c[i] == 'L' &amp;&amp; enter_c[i - 1] == 'L') || (enter_c[i] == 'D' &amp;&amp; enter_c[i - 1] == 'D')) //проверка на VV, LL и DD
+        k -= 1;
+    else if((enter_c[i] == 'X' &amp;&amp; enter_c[i - 1] == 'V') || (enter_c[i] == 'C' &amp;&amp; enter_c[i - 1] == 'I') || (enter_c[i] == 'C' &amp;&amp; enter_c[i - 1] == 'V') || (enter_c[i] == 'C' &amp;&amp; enter_c[i-1] == 'L') || (enter_c[i] == 'L' &amp;&amp; enter_c[i - 1] == 'I') || (enter_c[i] == 'L' &amp;&amp; enter_c[i - 1] == 'V') || (enter_c[i] == 'D' &amp;&amp; enter_c[i - 1] == 'I') || (enter_c[i] == 'D' &amp;&amp; enter_c[i - 1] == 'X') || (enter_c[i] == 'D' &amp;&amp; enter_c[i - 1] == 'L') || (enter_c[i] == 'D' &amp;&amp; enter_c[i - 1] == 'V') || (enter_c[i] == 'M' &amp;&amp; enter_c[i - 1] == 'I') || (enter_c[i] == 'M' &amp;&amp; enter_c[i - 1] == 'V') || (enter_c[i] == 'M' &amp;&amp; enter_c[i - 1] == 'X') || (enter_c[i] == 'M' &amp;&amp; enter_c[i - 1] == 'L') || (enter_c[i] == 'M' &amp;&amp; enter_c[i - 1] == 'D')) //очень большая проверка недопустимых пар из знаков
+        k -= 1;
+    else if(((enter_c[i] == 'V') &amp;&amp; (enter_c[i - 1] == 'I') &amp;&amp; (enter_c[i - 2] == 'V')) || ((enter_c[i] == 'L') &amp;&amp; (enter_c[i - 1] == 'X') &amp;&amp; (enter_c[i - 2] == 'L')) || ((enter_c[i] == 'D') &amp;&amp; (enter_c[i - 1] == 'C')) &amp;&amp; (enter_c[i - 2] == 'D')) //проверка на VIV, LXL и DCD
+        k -= 1;
+    else //если ни одно из условий не выполняется начинаем проверку на принадлежность введённых символов к допустимому пулу римских символов
+    {
+        for(int j = 0; j&lt;7; j++)
+        {
+    if(enter_c[i] == roman[j])
+    {
+        k += 1;
+    }
+        }
+    }
+    }
+    if(k == a) //если переменная k равна длинне массива выводим единицу, если нет, то 0
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+int count1(string d) //функция подсчёта
+{
+    //опять выполняем процедуру перевода строки в символьный массив
+    int a = d.length();
+    char enter_c[a];
+    strcpy(enter_c, d.c_str());
+    int k = 0;
+    //цикл длится до тех пор, пока не закончится число, приравниваем к символам и символьным комбинациям значения арабских цифр
+    for (int i = 0; i &lt; a; i++)
+    {
+    if (enter_c[i] == 'I')
+        k += 1;
+    else if(enter_c[i] == 'V')
+        {
+            if(enter_c[i - 1] == 'I')
+                k += 3;
+            else
+                k += 5;
+        }
+    else if(enter_c[i] == 'X')
+    {
+        if(enter_c[i - 1] == 'I')
+            k += 8;
+        else
+            k += 10;
+    }
+    else if(enter_c[i] == 'L')
+        {
+            if(enter_c[i-1] == 'X')
+                k += 30;
+            else
+                k += 50;
+        }
+    else if(enter_c[i] == 'C')
+{
+    if(enter_c[i-1] == 'X')
+        k += 80;
+    else
+        k += 100;
+}
+    else if(enter_c[i] == 'D')
+        {
+            if(enter_c[i-1] == 'C')
+            k += 300;
+            else
+            k += 500;
+        }
+    else if(enter_c[i] == 'M')
+{
+    if(enter_c[i-1] == 'C')
+        k += 800;
+    else
+        k += 1000;
+}
+    }
+    //как только она проходит свой случай к переменной добавляется нужное число, в конце просто возвращаем - что получилось
+    return k;
+}
+int main()
+{
+    setlocale(LC_ALL, "Russian"); //локализируем консоль
+    char roman[] = {'I','V','X','L','C','D','M'}; //вводим пул из используемых римских цифр
+    string enter; //переменная ввода
+    //сообщаем пользователю условия задачи и просим ввести римское число
+    cout &lt;&lt; "Введите римскую запись числа для её декодирования" &lt;&lt; endl;
+    cin &gt;&gt; enter;
+    int a = enter.length(); //целочисленная переменная а - длинна введённого числа
+    char enter_c[a]; //символьный массив длинны введённого числа
+    strcpy(enter_c, enter.c_str()); //переносим в сивмольный массив строку
+    if(correct_enter(enter) == 1) //если проверка показала, что число введено правильно - вызываем функцию подсчёта
+    {
+        count1(enter);
+        cout &lt;&lt; count1(enter);
+    }
+    else //в противном случае выводим сообщение об ошибке
+    {
+        cout &lt;&lt; "Неправильная последовательность чисел!" &lt;&lt; endl;
+    }
+
+    return 0;
+}
+                </code>
+              </pre>
           </div>
-          <div class="about-facts-container">
-            <div class="about-facts-flex">
-              <button class="about-facts-button" onclick="factsButtonClick(2)">
-                +
-              </button>
-              <h2>Любимая литература и кинематограф</h2>
-            </div>
-            <div class="about-facts-text-container">
-              <p class="about-facts-text">
-                Если выбор стоит между прочтением книги и просмотром фильма, то
-                вероятнее всего, я выберу первый вариант. Читаю я исключительно
-                художественную литературу. Научпоп и другие полезные материалы,
-                мне удобнее воспринимать в аудио-визуальном формате. Я не
-                считаю, что литература должна ставиться на уровень выше
-                кинематографа, ведь важен не инструмент получения информации, а
-                лишь сама её суть. Я могу месяцами ничего не читать, а затем
-                найти интересную книгу и с трудом отрываясь на приём пищи,
-                читать, не переставая, постоянно находясь в напряжении и
-                предвкушении. Своей самой любимой книгой/серией книг, я считаю
-                роман "Анжелика". Также я нахожусь в бесконечном восторге от
-                всего творчества Стивена Кинга. В кинематографе мне нравятся
-                фильмы с участием Джима Керри. А также сериалы: Доктор Кто,
-                доктор Хаус, сверхъестественное, остаться в живых.
-              </p>
-            </div>
+          <p>
+            Это уже задание повышенной сложности
+          </p>
+          <div class="code">
+            <pre>
+                <code>
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+    //вводим переменные
+    int counter = 1,num,counter2 = 0,counter3 = 0;
+    char b,var;
+    char present[21][21];
+    char future[21][21];
+    srand(time(0)); //привязываем генератор случайных чисел к консольному времени
+    setlocale(LC_ALL, "Russian"); //локализируем консоль
+    //создаём два файла на диске
+    ofstream outfile("D://work.dat");
+    ofstream outfile1("D://work.out");
+    outfile1 << "Поколение №1" << endl; //вводим во второй файл название
+    for (int c = 0;c<21;c++) //этими циклами генерируем символы в первом массиве 21х21
+    {
+    for(int a = 0;a<21;a++)
+    {
+        b = 33+rand()%4; //остаток можно изменять, но если добавлять больше различных символов, тем больше будет шанс на быстрое вымирание
+        outfile << b << " "; //вводим символы в первый файл через пробел
+        if(b==34) //выбираем допустим символ №34, и говорим, что это и есть микробы
+            {
+            present[c][a] = '1'; //заполняем символьный массив единицами на тех местах, где стоит 34 символ
+            outfile1 << present[c][a]; //записываем массив во второй файл
+            }
+        else
+            {
+            present[c][a] = 0; //если этого символа нет, то в массив записываем не символьный нуль
+            outfile1 << "-"; //а в файл знак '-'
+            }
+    }
+    outfile1 << endl; //в конце каждой итерации второго цикла переходим на новую строку в обоих файлах
+    outfile << endl;
+    }
+    outfile.close(); //закрываем файл с символами
+    cout << "Введите количество поколений" << endl; //просим у пользователя ввод
+    cin >> num;
+    while(counter!=num) //тут в дело вступает первый счётчик, как только он достигнет числа, введённого пользователем, процесс генерирования поколений прекратится
+    {
+        counter += 1; //в начале каждой итерации переключаем счётчик
+        outfile1 << "Поколение №" << counter << endl; //вводим номер поколения в файл
+        for(int e = 0;e<21;e++) //основные два цикла, генерирующие поколения
+        {
+            for(int f = 0;f<21;f++)
+            {
+                if(present[e][f]!=0) //проверяем символьный массив на нули
+                {
+                    if(present[e][f+1]!=0&&present[e][f+1] != '0') //эти if-ы проверяют значения на "соседство"
+                        counter3 += 1; //каждое такое "соседство" изменяет уже второй счётчик, когда значения счётчика 1, или 4, микроб умирает, если 2-3, то растёт
+                    if(present[e][f-1]!=0&&present[e][f-1] != '0')
+                        counter3 += 1;
+                    if(present[e+1][f]!=0&&present[e+1][f] != '0')
+                        counter3 += 1;
+                    if(present[e-1][f]!=0&&present[e-1][f] != '0')
+                        counter3 += 1;
+                    if(present[e][f]=='0') //теперь проверяем на символьные нули, эти случаи возможны только начиная со второго поколения
+                    {
+                        if(counter3==2||counter3==3) //если есть соседи, то микроб будет расти
+                            {
+                        var = present[e][f]; //добавляем символьную переменную, чтобы не изменять значения текущего поколения
+                        var++;
+                        future[e][f] = var;
+                        var = 0; //обнуляем переменную, она нам ещё понадобиться
+                        outfile1 << future[e][f]; //записываем приравненное будущее число в файл
+                        counter2+=1; //а тут уже приходит время третьего счётчика, если при окончании текущей итерации он так и останется нулевым, то это будет значить, что все микробы вымерли
+                            }
+                        else //если соседей нет, то он опять становится нулём
+                            {
+                            future[e][f] = '0';
+                            outfile1 << future[e][f]; //записываем нуль в файл
+                            }
+                    }
+                    else if(counter3==2||counter3==3) //если у любого элемента есть 2, или 3 соседа, то значит, что он не умрёт
+                    {
+                        var = present[e][f]; //опять используем эту же самую переменную
+                        var++;
+                        future[e][f] = var;
+                        if(future[e][f]==':') //тут я немного изменил условия задачи, т.к. я использую символьный массив, то максимальный возраст было удобнее сократить с 12 до 9
+                            future[e][f] = '0'; //микроб умирает и возраждается вновь
+                        counter2 += 1; //опять тот самый третий счётчик
+                        outfile1 << future[e][f]; //записываем число в файл
+                        var = 0; //снова обнуляем переменную, для дальнейшего использования уже в следующей итерации
+                    }
+                    else //по сути нужно только для второго поколения, чтобы узнать, какие микробы умрут, в дальнейшем, они уже будут взаимодействовать через первый if
+                    {
+                        future[e][f] = '0'; //обнуляем элемент
+                        outfile1 << future[e][f];  //записываем его в файл
+                    }
+                }
+                else //этот else для всех поколений одинаковый - просто отвечает за проставление минусов в файле в тех местах, где микробы не водятся
+                    {
+                    future[e][f]=0; //добавляем не символьный нуль в следующее поколение
+                    outfile1 << "-"; //а в файл записываем минус
+                    }
+                    counter3 = 0; //второй счётчик необходимо обнулять, после каждой итерации второго цикла
+            }
+            outfile1 << endl; //после каждой итерации второго цикла, переходим на другую строку
+        }
+        if(counter2 == 0) //проверка "есть ли кто живой?"
+            {
+                outfile1 << endl << "Поколение вымерло"; //если живых нет, сообщаем об этом в файле и прекращаем работу программы, т.к она бессмысленна
+                outfile1.close(); //закрываем файл
+                return 0;
+            }
+        for(int g = 0;g<21;g++) //ну а эти циклы отвечают за переход из будущего поколения в текущее
+        {
+            for(int h = 0;h<21;h++)
+            {
+                present[g][h] = future[g][h];
+                future[g][h] = 0; //обязательно обнуляем значения будущего поколения
+            }
+        }
+        //ну и в конце каждого поколения обнуляем оба счётчика
+        counter2 = 0;
+        counter3 = 0;
+    }
+    outfile1.close(); //как только основной цикл закончился, закрываем файл
+    return 0;
+}
+                </code>
+              </pre>
           </div>
-          <div class="about-facts-container">
-            <div class="about-facts-flex">
-              <button class="about-facts-button" onclick="factsButtonClick(3)">
-                +
-              </button>
-              <h2>Любимая музыка</h2>
+          <p>
+            Все остальные задачи <a target="_blank" href="https://github.com/DavidaaWoW/MIREAHOMEWORK">здесь.</a>
+          </p>
+        </div>
+        <div class="about-history-slider">
+          <button class="about-history-slider-button-left" onclick="onLeftButtonClick()">
+            <img src="../images/arrow-left.png" alt="left-arrrow" />
+          </button>
+          <button class="about-history-slider-button-right" onclick="onRightButtonClick()">
+            <img src="../images/arrow-right.png" alt="right-arrow" />
+          </button>
+          <h2>После того, как написал множество программ в консоли, возникает естественное желание попробовать себя в
+            GUI, именно такое желание возникло у меня, а так как кроме C++, на момент окончания первого семестра я
+            ничего не знал, то и выбор у меня был небольшой. С этого момента я начал изучение wxWidgets и CLI .Net. Мною
+            было написано несколько проектов, с которыми позже я выступал на конференции <a href="conference.html">"Цифровизация
+              техносферы"</a></h2>
+          <p>
+            Однако на конференции с C++ GUI всё не закончилось, и помимо этого мною была создана простейшая детская игра
+            - пятнашки. Но создать её оказалось не так просто, как я думал. Ниже представлен её код.
+          </p>
+          <div class="code about-margin">
+            <pre>
+              <code>
+#include "MyForm.h"
+#include &lt;cstdlib&gt;
+#include &lt;ctime&gt;
+#include &lt;fstream&gt;
+
+using namespace Project2;
+
+bool check[16];
+int moves = 0;
+
+std::ofstream outfile("C://Users//User//source//repos//Project2//logs.txt");
+
+void MyForm::checkwin()
+{
+	if (button3-&gt;Location == System::Drawing::Point(1,1) &amp;&amp; button4-&gt;Location == System::Drawing::Point(147, 1) &amp;&amp; button5-&gt;Location == System::Drawing::Point(439, 1) &amp;&amp; button6-&gt;Location == System::Drawing::Point(293, 1) &amp;&amp; button7-&gt;Location == System::Drawing::Point(439, 117) &amp;&amp; button8-&gt;Location == System::Drawing::Point(293, 117) &amp;&amp; button9-&gt;Location == System::Drawing::Point(147, 117) &amp;&amp; button10-&gt;Location == System::Drawing::Point(1, 117) &amp;&amp; button12-&gt;Location == System::Drawing::Point(293, 349) &amp;&amp; button13-&gt;Location == System::Drawing::Point(147, 349) &amp;&amp; button14-&gt;Location == System::Drawing::Point(1, 349) &amp;&amp; button15-&gt;Location == System::Drawing::Point(439, 233) &amp;&amp; button16-&gt;Location == System::Drawing::Point(293, 233) &amp;&amp; button17-&gt;Location == System::Drawing::Point(147, 233) &amp;&amp; button18-&gt;Location == System::Drawing::Point(1, 233))
+	{
+		String^ msg = String::Concat("You won in ", System::Convert::ToString(label1-&gt;Text), " moves");
+		MessageBox::Show(msg);
+	}
+}
+
+bool MyForm::randomcheck(int b)
+{
+	if (!check[b])
+	{
+		check[b] = true;
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+void MyForm::randomplace(System::Windows::Forms::Button^ a)
+{
+	int temp;
+	temp = rand() % 16;
+	outfile &lt;&lt; temp &lt;&lt; " ";
+	switch (temp)
+	{
+	case 0:
+		if (!randomcheck(0))
+		{
+			a-&gt;Location = System::Drawing::Point(1, 1);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 1:
+		if (!randomcheck(1))
+		{
+			a-&gt;Location = System::Drawing::Point(147, 1);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 2:
+		if (!randomcheck(2))
+		{
+			a-&gt;Location = System::Drawing::Point(293, 1);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 3:
+		if (!randomcheck(3))
+		{
+			a-&gt;Location = System::Drawing::Point(439, 1);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 4:
+		if (!randomcheck(4))
+		{
+			a-&gt;Location = System::Drawing::Point(1, 117);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 5:
+		if (!randomcheck(5))
+		{
+			a-&gt;Location = System::Drawing::Point(147, 117);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 6:
+		if (!randomcheck(6))
+		{
+			a-&gt;Location = System::Drawing::Point(293, 117);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 7:
+		if (!randomcheck(7))
+		{
+			a-&gt;Location = System::Drawing::Point(439, 117);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 8:
+		if (!randomcheck(8))
+		{
+			a-&gt;Location = System::Drawing::Point(1, 233);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 9:
+		if (!randomcheck(9))
+		{
+			a-&gt;Location = System::Drawing::Point(147, 233);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 10:
+		if (!randomcheck(10))
+		{
+			a-&gt;Location = System::Drawing::Point(293, 233);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 11:
+		if (!randomcheck(11))
+		{
+			a-&gt;Location = System::Drawing::Point(439, 233);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 12:
+		if (!randomcheck(12))
+		{
+			a-&gt;Location = System::Drawing::Point(1, 349);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 13:
+		if (!randomcheck(13))
+		{
+			a-&gt;Location = System::Drawing::Point(147, 349);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 14:
+		if (!randomcheck(14))
+		{
+			a-&gt;Location = System::Drawing::Point(293, 349);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	case 15:
+		if (!randomcheck(15))
+		{
+			a-&gt;Location = System::Drawing::Point(439, 349);
+		}
+		else
+		{
+			randomplace(a);
+		}
+		break;
+	}
+}
+
+void MyForm::randomgen()
+{
+	for (int a = 0; a &lt; 16; a++)
+	{
+		check[a] = false;
+	}
+	srand(time(0));
+	randomplace(button3);
+	randomplace(button4);
+	randomplace(button5);
+	randomplace(button6);
+	randomplace(button7);
+	randomplace(button8);
+	randomplace(button9);
+	randomplace(button10);
+	randomplace(button11);
+	randomplace(button12);
+	randomplace(button13);
+	randomplace(button14);
+	randomplace(button15);
+	randomplace(button16);
+	randomplace(button17);
+	randomplace(button18);
+}
+
+void MyForm::move()
+{
+	int a = System::Convert::ToInt32(System::Convert::ToString(label1-&gt;Text));
+	a++;
+	label1-&gt;Text = System::Convert::ToString(a);
+}
+
+System::Drawing::Point MyForm::doxy(int a, int b)
+{
+	if (a + 146 == button11-&gt;Location.X &amp;&amp; b==button11-&gt;Location.Y)
+	{
+		button11-&gt;Location = System::Drawing::Point(a, b);
+		move();
+		return System::Drawing::Point(a + 146, b);
+	}
+	else if (a - 146 == button11-&gt;Location.X &amp;&amp; b == button11-&gt;Location.Y)
+	{
+		button11-&gt;Location = System::Drawing::Point(a, b);
+		move();
+		return System::Drawing::Point(a - 146, b);
+	}
+	else if (b - 116 == button11-&gt;Location.Y &amp;&amp; a == button11-&gt;Location.X)
+	{
+		button11-&gt;Location = System::Drawing::Point(a, b);
+		move();
+		return System::Drawing::Point(a, b-116);
+	}
+	else if (b + 116 == button11-&gt;Location.Y &amp;&amp; a == button11-&gt;Location.X)
+	{
+		button11-&gt;Location = System::Drawing::Point(a, b);
+		move();
+		return System::Drawing::Point(a, b + 116);
+	}
+	else
+	{
+		return System::Drawing::Point(a, b);
+	}
+}
+
+System::Void MyForm::button2_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	Close();
+}
+
+System::Void MyForm::button1_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button1-&gt;Hide();
+	button2-&gt;Hide();
+	panel1-&gt;Visible = true;
+	button19-&gt;Visible = true;
+	button20-&gt;Visible = true;
+	label1-&gt;Visible = true;
+	label1-&gt;Text = "0";
+	randomgen();
+}
+
+System::Void MyForm::button12_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button12-&gt;Location = System::Drawing::Point(doxy(button12-&gt;Location.X, button12-&gt;Location.Y));
+	checkwin();
+}
+
+System::Void MyForm::button16_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button16-&gt;Location = System::Drawing::Point(doxy(button16-&gt;Location.X, button16-&gt;Location.Y));
+}
+
+System::Void MyForm::button3_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button3-&gt;Location = System::Drawing::Point(doxy(button3-&gt;Location.X, button3-&gt;Location.Y));
+}
+
+System::Void MyForm::button4_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button4-&gt;Location = System::Drawing::Point(doxy(button4-&gt;Location.X, button4-&gt;Location.Y));
+}
+
+System::Void MyForm::button5_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button5-&gt;Location = System::Drawing::Point(doxy(button5-&gt;Location.X, button5-&gt;Location.Y));
+}
+
+System::Void MyForm::button6_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button6-&gt;Location = System::Drawing::Point(doxy(button6-&gt;Location.X, button6-&gt;Location.Y));
+}
+
+System::Void MyForm::button7_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button7-&gt;Location = System::Drawing::Point(doxy(button7-&gt;Location.X, button7-&gt;Location.Y));
+}
+
+System::Void MyForm::button8_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button8-&gt;Location = System::Drawing::Point(doxy(button8-&gt;Location.X, button8-&gt;Location.Y));
+}
+
+System::Void MyForm::button9_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button9-&gt;Location = System::Drawing::Point(doxy(button9-&gt;Location.X, button9-&gt;Location.Y));
+}
+
+System::Void MyForm::button10_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button10-&gt;Location = System::Drawing::Point(doxy(button10-&gt;Location.X, button10-&gt;Location.Y));
+}
+
+System::Void MyForm::button13_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button13-&gt;Location = System::Drawing::Point(doxy(button13-&gt;Location.X, button13-&gt;Location.Y));
+}
+
+System::Void MyForm::button14_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button14-&gt;Location = System::Drawing::Point(doxy(button14-&gt;Location.X, button14-&gt;Location.Y));
+}
+
+System::Void MyForm::button15_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button15-&gt;Location = System::Drawing::Point(doxy(button15-&gt;Location.X, button15-&gt;Location.Y));
+	checkwin();
+}
+
+System::Void MyForm::button17_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button17-&gt;Location = System::Drawing::Point(doxy(button17-&gt;Location.X, button17-&gt;Location.Y));
+}
+
+System::Void MyForm::button18_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button18-&gt;Location = System::Drawing::Point(doxy(button18-&gt;Location.X, button18-&gt;Location.Y));
+}
+
+System::Void MyForm::button19_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	button1-&gt;Visible = true;
+	button2-&gt;Visible = true;
+	panel1-&gt;Visible = false;
+	button19-&gt;Visible = false;
+	button20-&gt;Visible = false;
+	label1-&gt;Visible = false;
+}
+
+System::Void MyForm::button20_Click(System::Object^ sender, System::EventArgs^ e)
+{
+	randomgen();
+	label1-&gt;Text = "0";
+}
+              </code>
+            </pre>
+          </div>
+          <div class="about-slider-image-container-2">
+            <img src="../images/about-interface.png" alt="Интерфейс программы"></img>
+            <h4>Рис. 1 Интерфейс программы "пятнашки"</h4>
+          </div>
+          <div class="about-slider-image-container-2">
+            <img src="../images/about-game.png" alt="Интерфейс игрового поля"></img>
+            <h4>Рис. 2 Интерфейс игрового поля "пятнашки"</h4>
+          </div>
+          <div class="about-slider-image-container-2">
+            <img src="../images/about-game-win.png" alt="Сообщение о победе"></img>
+            <h4>Рис. 3 Сообщение о победе, когда все пятнашки расположены по порядку</h4>
+          </div>
+        </div>
+        <div class="about-history-slider">
+          <button class="about-history-slider-button-left" onclick="onLeftButtonClick()">
+            <img src="../images/arrow-left.png" alt="left-arrrow" />
+          </button>
+          <button class="about-history-slider-button-right" onclick="onRightButtonClick()">
+            <img src="../images/arrow-right.png" alt="right-arrow" />
+          </button>
+          <h2>Нужно было идти дальше, и я решил взглянуть на уже знакомую мне платформу .Net, только теперь с её
+            "родным" C#, идея была следующей: создать приложение три в одном - генератор паролей, шифратор паролей и
+            дешифратор. На самом деле C# не так уж сильно по синтаксису отличается от C++, разве что контроля над
+            памятью становится в разы меньше...</h2>
+
+          <p>Фрагмент кода с генерацией паролей</p>
+          <div class="code">
+            <pre>
+                <code>
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _3in1
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+        }
+
+        private void closeApp(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        string randomGenAll()
+        {
+            Random rand = new Random();
+            int value;
+            char ch;
+            string result = "";
+            for (int a = 0; a&lt;10; a++)
+            {
+                value = rand.Next(33, 122);
+                ch = Convert.ToChar(value);
+                result += ch;
+            }
+            return result;
+        }
+
+        string randomGenLN()
+        {
+            Random rand = new Random();
+            int value;
+            char ch;
+            string result = "";
+            for (int a = 0; a &lt; 10; a++)
+            {
+                do
+                {
+                    value = rand.Next(48, 122);
+                }
+                while ((value&gt;57 &amp;&amp; value&lt;65)||(value&gt;90&amp;&amp;value&lt;97));
+                ch = Convert.ToChar(value);
+                result += ch;
+            }
+            return result;
+        }
+
+        string randomGenLe()
+        {
+            Random rand = new Random();
+            int value;
+            char ch;
+            string result = "";
+            for (int a = 0; a &lt; 10; a++)
+            {
+                do
+                {
+                    value = rand.Next(65, 122);
+                }
+                while (value &gt; 90 &amp;&amp; value &lt; 97);
+                ch = Convert.ToChar(value);
+                result += ch;
+            }
+            return result;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string password = "";
+            if(radioButton1.Checked)
+            {
+                password = randomGenAll();
+            }
+            else if(radioButton2.Checked)
+            {
+                password = randomGenLN();
+            }
+            else if(radioButton3.Checked)
+            {
+                password = randomGenLe();
+            }
+            label1.Text = password;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(label1.Text!="PASSWORD")
+            Clipboard.SetText(label1.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
+    }
+}
+
+                </code>
+              </pre>
+          </div>
+          <div class="about-slider-image-container-2">
+            <img src="../images/about-3in1-interface.png" alt="Интерфейс программы"></img>
+            <h4>Рис. 4 Интерфейс программы "3 в 1"</h4>
+          </div>
+          <div class="about-slider-image-container-2">
+            <img src="../images/about-3in1-passgen.png" alt="Интерфейс генератора паролей"></img>
+            <h4>Рис. 5 Интерфейс генератора паролей</h4>
+          </div>
+          <div class="about-slider-image-container-2">
+            <img src="../images/about-3in1-encoder.png" alt="Интерфейс шифратора паролей"></img>
+            <h4>Рис. 6 Интерфейс шифратора паролей</h4>
+          </div>
+          <div class="about-slider-image-container-2">
+            <img src="../images/about-3in1-decoder.png" alt="Интерфейс дешифратора паролей"></img>
+            <h4>Рис. 7 Интерфейс дешифратора паролей</h4>
+          </div>
+        </div>
+        <div class="about-history-slider">
+          <button class="about-history-slider-button-left" onclick="onLeftButtonClick()">
+            <img src="../images/arrow-left.png" alt="left-arrrow" />
+          </button>
+          <button class="about-history-slider-button-right" onclick="onRightButtonClick()">
+            <img src="../images/arrow-right.png" alt="right-arrow" />
+          </button>
+          <h2>Следующим моим шагом стало знакомство с frontend разработкой. Начинал я с <a
+              href="https://stepik.org/course/38218" target="_blank">курса</a> на Stepik, про HTML+CSS вёрстку. Затем
+            шло самостоятельное изучение Javascript, свои тестовые проекты, и наконец-то данная курсовая работа.</h2>
+          <p>Рассмотрим один из тестовых проектов, макет которого я просто нашёл на просторах интернета.</p>
+          <div class="about-slider-image-container-2">
+            <img src="../images/about-testimonila-main.png" alt="Страница тестового проекта"
+              class="about-testimonila-main"></img>
+            <h4>Рис. 8 Страница тестового проекта</h4>
+          </div>
+          <p>Пример кода работы слайдера, на чистом JS</p>
+          <div class="code">
+            <pre>
+              <code>
+                let slider_count =
+                document.getElementsByClassName("testimonila_slider").length;
+              let current_slider = 0;
+              function sliderChange(direction) {
+                let slider = document.getElementsByClassName("testimonila_slider");
+                if (direction) {
+                  slider[current_slider + 1].style.display = "flex";
+                } else {
+                  slider[current_slider - 1].style.display = "flex";
+                }
+                slider[current_slider].style.display = "none";
+              }
+              function testimonila_button_deactivate(arrow_color, button) {
+                button[0].style.border = "solid";
+                button[0].style.backgroundColor = "white";
+                button[0].style.borderColor = "#eff3f8";
+                button[0].style.cursor = "default";
+                arrow_color[0].style.color = "#eef0f2";
+              }
+              function testimonila_button_activate(arrow_color, button) {
+                button[0].style.border = "none";
+                button[0].style.backgroundColor = "#eff3f8";
+                button[0].style.borderColor = "white";
+                button[0].style.cursor = "pointer";
+                arrow_color[0].style.color = "#2500f9";
+              }
+              function testimonila_left_button() {
+                let arrow_color_left = document.getElementsByClassName(
+                  "testimonila_arrow_color_left"
+                );
+                let button_left = document.getElementsByClassName(
+                  "testimonila_button_left"
+                );
+                let button_right = document.getElementsByClassName(
+                  "testimonila_button_right"
+                );
+                let arrow_color_right = document.getElementsByClassName(
+                  "testimonila_arrow_color_right"
+                );
+                if (getComputedStyle(arrow_color_left[0]).color == "rgb(37, 0, 249)") {
+                  if (current_slider - 1 == 0) {
+                    testimonila_button_deactivate(arrow_color_left, button_left);
+                  }
+                  if (current_slider - 1 == slider_count - 2) {
+                    testimonila_button_activate(arrow_color_right, button_right);
+                  }
+                  sliderChange(false);
+                  current_slider--;
+                } else {
+                  return;
+                }
+              }
+              function testimonila_right_button() {
+                let arrow_color_left = document.getElementsByClassName(
+                  "testimonila_arrow_color_left"
+                );
+                let button_left = document.getElementsByClassName(
+                  "testimonila_button_left"
+                );
+                let button_right = document.getElementsByClassName(
+                  "testimonila_button_right"
+                );
+                let arrow_color_right = document.getElementsByClassName(
+                  "testimonila_arrow_color_right"
+                );
+                if (getComputedStyle(arrow_color_right[0]).color == "rgb(37, 0, 249)") {
+                  if (current_slider + 1 == 1) {
+                    testimonila_button_activate(arrow_color_left, button_left);
+                  }
+                  if (current_slider + 1 == slider_count - 1) {
+                    testimonila_button_deactivate(arrow_color_right, button_right);
+                  }
+                  sliderChange(true);
+                  current_slider++;
+                } else {
+                  return;
+                }
+              }
+              function hideElements() {
+                let sliders = document.getElementsByClassName("testimonila_slider");
+                let minus = document.getElementsByClassName("FAQ_checkbox_minus");
+                for (let a = 1; a &lt; slider_count; a++) {
+                  sliders[a].style.display = "none";
+                }
+                for (let a = 0; a &lt; minus.length; a++) {
+                  minus[a].style.display = "none";
+                }
+              }
+              </code>
+            </pre>
+          </div>
+          <div class="about-slider-image-container-2">
+            <img src="../images/about-testimonila-slider.png" alt="Слайдер" class="about-testimonila-main"></img>
+            <h4>Рис. 8 Слайдер</h4>
+          </div>
+          <p>Сайт можно найти <a href="https://applab123.netlify.app/">тут</a></p>
+        </div>
+        <div class="about-history-slider">
+          <button class="about-history-slider-button-left" onclick="onLeftButtonClick()">
+            <img src="../images/arrow-left.png" alt="left-arrrow" />
+          </button>
+          <button class="about-history-slider-button-right" onclick="onRightButtonClick()">
+            <img src="../images/arrow-right.png" alt="right-arrow" />
+          </button>
+          <h2>После этого я устроился на первую неофициальную работу. Спектр моих обязанностей был крайне широк, поэтому
+            проще сказать, что я был именно IT специалистом. В чём суть? Разрабатывалось NoCode приложение, где главный
+            разработчик хорошо владел тем самым NoCode визуальным конструктором, но возможности у него были ограничены.
+            Так, мне приходилось писать backend интеграции, разрабатывать новые компоненты на фрейморке React+React
+            native, а также по мелочи заниматься data scrapping-ом, на питоне.</h2>
+          <p>Так выглядит код компонента, который делает всё сразу. С одной стороны, получая широту и долготу курьеров и
+            ресторана, он расчитывает между ними расстояния, а с другой стороны сразу же выбирает ближайшего курьера и
+            отдаёт заказ ему, конечно картина не полная, так как происходит интеграция с внутренними сервисами
+            конструктора. С одной стороны конечно не правильно такие задачи оставлять на frontend-е, а с другой
+            возможности платформы ограничены, как и бекэнд взаимодействие с ней.</p>
+            <div class="code">
+              <pre>
+                <code>
+import React, { Component } from 'react'
+import { Text, View, StyleSheet } from 'react-native'
+
+class CourierTrack extends Component {
+	flag = 0;
+	render() {
+		const { items,	coordinates, latrest, longrest,textaction  } = this.props
+		let distance = [];
+		if(!items)
+			return(&lt;View&gt;&lt;/View&gt;)
+		let len = items.length;
+		let min;
+		let minindex;
+		let lowerLat;
+		for(let a=0;a&lt;len;a++){
+			if(latrest&lt;items[a].coordinates.latrest)
+				lowerLat = latrest;
+			else
+				lowerLat = items[a].coordinates.latrest;
+			//distance[a] = Math.sqrt(Math.pow((latrest-items[a].coordinates.latcour),2)+Math.pow((longrest-items[a].coordinates.longcour),2));
+			distance[a] = 1000*Math.sqrt(Math.pow((Math.abs(latrest-items[a].coordinates.latcour)*111.16),2)+Math.pow((Math.abs(longrest-items[a].coordinates.longcour)*111.3*0.745),2));
+			if(a==0)
+			{
+				min = distance[a];
+				minindex = a;
+			}
+			if(distance[a]&lt;min)
+			{
+				min = distance[a];
+				minindex = a;
+			}
+		}
+		if(this.flag==0 &amp;&amp; minindex!=undefined){
+			try{
+				items[minindex].textaction(min);
+				this.flag++;
+			}
+			catch
+			{
+				
+			}
+		}
+		return (
+			&lt;View style={styles.wrapper}&gt;
+				{distance.map((item)=&gt;
+				&lt;Text&gt;{item}&lt;/Text&gt;)}
+				&lt;Text&gt;Minimal: {Math.min.apply(Math,distance)}, minimal index: {minindex}&lt;/Text&gt;
+			&lt;/View&gt;
+		)
+	}
+}
+
+const styles = StyleSheet.create({
+	wrapper: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+	}
+})
+
+export default CourierTrack
+                </code>
+              </pre>
             </div>
-            <div class="about-facts-text-container">
-              <p class="about-facts-text">
-                Я действительно люблю слушать музыку! Любимые жанры: pop, edm,
-                rock/alternative, reggaeton. Обычно песни в моём плейлисте
-                бывают на английском, испанском и французском, иногда
-                проскальзывает корейский и хинди. Статус любимой группы у меня
-                имеют "Imagine dragons". С исполнителями всё не так просто, их
-                слишком много! А ещё к небольшому хобби пожалуй можно отнести
-                мой постоянный интерес к мировым чартам, будь то billboard,
-                IHeart, ARIA, bbc charts, или даже spotify global chart.
-              </p>
+            <div class="about-slider-image-container-2">
+              <img src="../images/about-it-courier.png" alt="Вид компонента"></img>
+              <h4>Рис. 9 Внешний вид компонента и его внутренние настройки</h4>
             </div>
+        </div>
+        <!--<div class="about-history-slider">
+          <button class="about-history-slider-button-left" onclick="onLeftButtonClick()">
+            <img src="../images/arrow-left.png" alt="left-arrrow" />
+          </button>
+          <button class="about-history-slider-button-right" onclick="onRightButtonClick()">
+            <img src="../images/arrow-right.png" alt="right-arrow" />
+          </button>
+          <h2>5</h2>
+        </div>-->
+      </div>
+      <div class="about-facts">
+        <h1>Несколько фактов обо мне:</h1>
+        <div class="about-facts-container">
+          <div class="about-facts-flex">
+            <button class="about-facts-button" onclick="factsButtonClick(0)">
+              +
+            </button>
+            <h2>Soft skills, или социальные навыки</h2>
+          </div>
+          <div class="about-facts-text-container">
+            <p class="about-facts-text">
+              В целом я могу себя назвать довольно социальным и крайне
+              неконфликтным человеком. Однако это не значит податливость и
+              мягкотелось, если у меня есть мнение, и я считаю его верным, то
+              я готов его отстаивать, применяя аргументы, и в то же время,
+              готов выслушивать конструктивную критику и всупать в дискуссии.
+              В школьное время участвовал во многих кружках, посещал семинары,
+              ходил в языковые клубы, ездил в летние лагеря, и всё это в
+              условиях, когда люди вокруг вообще не говорили, или говорили в
+              недостаточной степени на моём родном языке. Люблю работать в
+              команде, только в том случае, если сохраняется здоровая
+              атмосфера, а задания конкретно распределены между членами, и
+              конечно же составлен план.
+            </p>
+          </div>
+        </div>
+        <div class="about-facts-container">
+          <div class="about-facts-flex">
+            <button class="about-facts-button" onclick="factsButtonClick(1)">
+              +
+            </button>
+            <h2>Увлечения, хобби</h2>
+          </div>
+          <div class="about-facts-text-container">
+            <p class="about-facts-text">
+              Основным своим хобби, которым я увлекаюсь с пяти лет, я считаю
+              шахматы. Так, за моими плечами десятки региональных,
+              национальных и международных турниров, медали и кубки с
+              чемпионатов всех уровней, международный рейтинг шахматной
+              федерации ФИДЕ, и тысячи часов проведённых за увлекательнейшими
+              партиями, с разными контролями времени. <br />
+              Невозможно также не выделить программирование. Хоть оно и
+              преодолело уровень хобби, и перешло в статус работы и карьеры,
+              оно всё ещё приносит мне невероятное удовольствие, и я могу
+              заниматься даже собственными проектами в свободное от учёбы и
+              работы время. <br />
+              Из менее значимых увлечений можно выделить мою бесконечную
+              любовь к истории с географией. Нравится также читать и
+              размышлять о политике и социально значимых и актуальных темах.
+              Ну и отдельное место в моём сердце занимают настольные игры.
+            </p>
+          </div>
+        </div>
+        <div class="about-facts-container">
+          <div class="about-facts-flex">
+            <button class="about-facts-button" onclick="factsButtonClick(2)">
+              +
+            </button>
+            <h2>Любимая литература и кинематограф</h2>
+          </div>
+          <div class="about-facts-text-container">
+            <p class="about-facts-text">
+              Если выбор стоит между прочтением книги и просмотром фильма, то
+              вероятнее всего, я выберу первый вариант. Читаю я исключительно
+              художественную литературу. Научпоп и другие полезные материалы,
+              мне удобнее воспринимать в аудио-визуальном формате. Я не
+              считаю, что литература должна ставиться на уровень выше
+              кинематографа, ведь важен не инструмент получения информации, а
+              лишь сама её суть. Я могу месяцами ничего не читать, а затем
+              найти интересную книгу и с трудом отрываясь на приём пищи,
+              читать, не переставая, постоянно находясь в напряжении и
+              предвкушении. Своей самой любимой книгой/серией книг, я считаю
+              роман "Анжелика". Также я нахожусь в бесконечном восторге от
+              всего творчества Стивена Кинга. В кинематографе мне нравятся
+              фильмы с участием Джима Керри. А также сериалы: Доктор Кто,
+              доктор Хаус, сверхъестественное, остаться в живых.
+            </p>
+          </div>
+        </div>
+        <div class="about-facts-container">
+          <div class="about-facts-flex">
+            <button class="about-facts-button" onclick="factsButtonClick(3)">
+              +
+            </button>
+            <h2>Любимая музыка</h2>
+          </div>
+          <div class="about-facts-text-container">
+            <p class="about-facts-text">
+              Я действительно люблю слушать музыку! Любимые жанры: pop, edm,
+              rock/alternative, reggaeton. Обычно песни в моём плейлисте
+              бывают на английском, испанском и французском, иногда
+              проскальзывает корейский и хинди. Статус любимой группы у меня
+              имеют "Imagine dragons". С исполнителями всё не так просто, их
+              слишком много! А ещё к небольшому хобби пожалуй можно отнести
+              мой постоянный интерес к мировым чартам, будь то billboard,
+              IHeart, ARIA, bbc charts, или даже spotify global chart.
+            </p>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="footer-grid">
-        <div class="footer-main">
-          <a href="main.html">На главную</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-main">
+        <a href="main.html">На главную</a>
+      </div>
+      <div class="footer-about">
+        <a href="about.html">Коротко обо мне</a>
+      </div>
+      <div class="footer-uni">
+        <a href="university.html">Университет</a>
+      </div>
+      <div class="footer-conf">
+        <a href="conference.html">Конференция "цифровизация техносферы"</a>
+      </div>
+      <div class="footer-job">
+        <a href="work.html">Работа IT специалистом</a>
+      </div>
+      <div class="footer-contact">
+        <div>
+          <a href="https://www.facebook.com/david.gegiya" target="_blank"><img src="../images/facebook-logo.png"
+              alt="facebook logo" /></a>
         </div>
-        <div class="footer-about">
-          <a href="about.html">Коротко обо мне</a>
+        <div>
+          <a href="https://www.instagram.com/davidaa_wow123/" target="_blank"><img src="../images/instagram-logo.jpg"
+              alt="instagram logo" /></a>
         </div>
-        <div class="footer-uni">
-          <h3>Университет</h3>
+        <div>
+          <a href="https://vk.com/davidaawow" target="_blank"><img src="../images/vk-logo.jpg"
+              alt="vkontakte logo" /></a>
         </div>
-        <div class="footer-conf">
-          <h3>Конференция "цифровизация техносферы"</h3>
+        <div>
+          <a href="mailto:davidik.gegiya@gmail.com" target="_blank"><img src="../images/gmail-logo.png"
+              alt="gmail logo" /></a>
         </div>
-        <div class="footer-job">
-          <h3>Работа IT специалистом</h3>
-        </div>
-        <div class="footer-contact">
-          <div>
-            <a href="https://www.facebook.com/david.gegiya" target="_blank"
-              ><img src="../images/facebook-logo.png" alt="facebook logo"
-            /></a>
-          </div>
-          <div>
-            <a href="https://www.instagram.com/davidaa_wow123/" target="_blank"
-              ><img src="../images/instagram-logo.jpg" alt="instagram logo"
-            /></a>
-          </div>
-          <div>
-            <a href="https://vk.com/davidaawow" target="_blank"
-              ><img src="../images/vk-logo.jpg" alt="vkontakte logo"
-            /></a>
-          </div>
-          <div>
-            <a href="mailto:davidik.gegiya@gmail.com" target="_blank"
-              ><img src="../images/gmail-logo.png" alt="gmail logo"
-            /></a>
-          </div>
-          <div>
-            <a href="https://github.com/DavidaaWoW" target="_blank"
-              ><img src="../images/github-logo.png" alt="github logo"
-            /></a>
-          </div>
+        <div>
+          <a href="https://github.com/DavidaaWoW" target="_blank"><img src="../images/github-logo.png"
+              alt="github logo" /></a>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
