@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="../icon.jpg" />
     <title>Сайт Гегия Давита</title>
   </head>
@@ -13,20 +13,20 @@
     <header>
       <div class="container header_flex">
         <div class="logo">
-          <a href=""><img src="../images/logo.jpg" alt="logo image" /></a>
+          <a href="#top"><img src="images/logo.jpg" alt="logo image" /></a>
         </div>
         <nav class="menu">
           <ul>
             <li class="menu-button">
-              <script src="../scripts/mobile-menu.js"></script>
+              <script src="scripts/mobile-menu.js"></script>
               <button onclick="mobilemenuShow()">
-                <img src="../images/menu-icon.png" alt="menu icon" />
+                <img src="images/menu-icon.png" alt="menu icon" />
               </button>
               <ul class="menu-hideable">
                 <li>
                   <button onclick="mobilemenuHide()" class="mobile-menu-exit">
                     <img
-                      src="../images/close-mobile-menu.jpg"
+                      src="images/close-mobile-menu.jpg"
                       alt=""
                       width="32"
                       height="32"
@@ -34,54 +34,107 @@
                   </button>
                 </li>
                 <li class="mobile-menu-border">
-                  <a href="main.html">На главную!</a>
+                  <a href="index.html">На главную!</a>
                 </li>
                 <li class="mobile-menu-border">
-                  <a href="about.html">Коротко обо мне</a>
+                  <a href="html/about.html">Коротко обо мне</a>
                 </li>
                 <li class="mobile-menu-border">
-                  <a href="university.html">Университет</a>
+                  <a href="html/university.html">Университет</a>
                 </li>
                 <li class="mobile-menu-border">
-                  <a href="conference.html"
+                  <a href="html/conference.html"
                     >Конференция "цифровизация техносферы"</a
                   >
                 </li>
                 <li class="mobile-menu-border">
-                  <a href="work.html">Работа IT специалистом</a>
+                  <a href="html/work.html">Работа IT специалистом</a>
                 </li>
                 <li>
-                  <button class="contact-button mobile-contact">
+                  <button class="contact-button mobile-contact" onclick="openContacts()">
                     Контакты
                   </button>
                 </li>
               </ul>
             </li>
             <li class="menu-item item-shape">
-              <a href="main.html">На главную!</a>
+              <a href="index.html">На главную!</a>
             </li>
             <li class="menu-item item-shape">
-              <a href="about.html">Коротко обо мне</a>
+              <a href="html/about.html">Коротко обо мне</a>
             </li>
             <li class="menu-item item-shape">
-              <a href="university.html">Университет</a>
+              <a href="html/university.html">Университет</a>
             </li>
             <li class="menu-item item-shape">
-              <a href="conference.html"
+              <a href="html/conference.html"
                 >Конференция "цифровизация техносферы"</a
               >
             </li>
             <li class="menu-item item-shape">
-              <a href="work.html">Работа IT специалистом</a>
+              <a href="html/work.html">Работа IT специалистом</a>
             </li>
             <li class="menu-item">
-              <button class="contact-button">Контакты</button>
+              <button class="contact-button" onclick="openContacts()">Контакты</button>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
+      <div class="contacts-wrapper">
+        <div class="contacts">
+          <div class="contacts-close">
+            <button class="contacts-button" onclick="closeContacts()">
+              <img
+                src="images/close-mobile-menu.jpg"
+                alt="close-icon"
+                width="64"
+                height="64"
+              />
+            </button>
+          </div>
+          <div class="contacts-links">
+            <h2>Со мной можно всегда связаться по email:</h2>
+            <a href="mailto:davidik.gegiya@gmail.com"
+              >davidik.gegiya@gmail.com</a
+            >
+          </div>
+          <div class="contacts-links">
+            <h2>Или написать во вконтакте:</h2>
+            <a href="https://vk.me/davidaawow">Тык!</a>
+          </div>
+          <h2>Ну или же заполнить форму обратной связи ниже...</h2>
+          <div class="feedback-form">
+            <div class="feedback-text">
+              <h4>
+                Имя/Фамилия
+                <div class="sign">*</div>
+              </h4>
+              <input class="js-name" type="text" />
+              <h4>
+                Email
+                <div class="sign">*</div>
+              </h4>
+              <input class="js-mail" type="text" />
+              <h4>
+                Сообщение:
+                <div class="sign">*</div>
+              </h4>
+              <textarea
+                class="js-message"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <button class="contact-button feedback-button" onclick="send()">
+              Отправить!
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="container greeting">
         <div class="greeting-grid">
           <div class="greeting-text">
@@ -94,25 +147,23 @@
               <li>Специалист по NoCode решениям</li>
             </ul>
             <div class="greeting-buttons-flex">
-              <a><button class="greeting-button-cv">Скачать CV</button></a>
-              <a href="about.html"
+              <a href="files/CV.pdf"
+                ><button class="greeting-button-cv">Скачать CV</button></a
+              >
+              <a href="html/about.html"
                 ><button class="greeting-button-about">Обо мне</button></a
               >
             </div>
           </div>
           <div class="greeting-img-wrapper">
-            <img
-              class="greeting-img"
-              src="../images/greeting-photo.png"
-              alt=""
-            />
+            <img class="greeting-img" src="images/greeting-photo.png" alt="" />
           </div>
         </div>
       </div>
       <div class="container actual">
         <h1 class="actual-header">Актуальный стек технологий.</h1>
         <div class="actual-flex">
-          <img src="../images/stack.webp" alt="stack image" />
+          <img src="images/stack.webp" alt="stack image" />
           <ul>
             <li><span>HTML+CSS</span></li>
             <li><span>Javascript</span></li>
@@ -137,54 +188,57 @@
           Нет, всё вышеперечисленное не находится на уровне "посмотрел
           десятиминутный урок", по всем вышеперечисленным пунктам есть подробное
           описание в других разделах сайта, в первую очередь стоит посетить
-          раздел <a href="about.html">"Обо мне"</a>, там же находятся и проекты
-          по каждому из пунктов.
+          раздел <a href="html/about.html">"Обо мне"</a>, там же находятся и
+          проекты по каждому из пунктов.
         </p>
       </div>
     </main>
     <footer>
       <div class="footer-grid">
-        <div class="footer-main"><a href="main.html">На главную</a></div>
+        <div class="footer-main"><a href="index.html">На главную</a></div>
         <div class="footer-about">
-          <a href="about.html">Коротко обо мне</a>
+          <a href="html/about.html">Коротко обо мне</a>
         </div>
         <div class="footer-uni">
-          <a href="university.html">Университет</a>
+          <a href="html/university.html">Университет</a>
         </div>
         <div class="footer-conf">
-          <a href="conference.html">Конференция "цифровизация техносферы"</a>
+          <a href="html/conference.html"
+            >Конференция "цифровизация техносферы"</a
+          >
         </div>
         <div class="footer-job">
-          <a href="work.html">Работа IT специалистом</a>
+          <a href="html/work.html">Работа IT специалистом</a>
         </div>
         <div class="footer-contact">
           <div>
             <a href="https://www.facebook.com/david.gegiya" target="_blank"
-              ><img src="../images/facebook-logo.png" alt="facebook logo"
+              ><img src="images/facebook-logo.png" alt="facebook logo"
             /></a>
           </div>
           <div>
             <a href="https://www.instagram.com/davidaa_wow123/" target="_blank"
-              ><img src="../images/instagram-logo.jpg" alt="instagram logo"
+              ><img src="images/instagram-logo.jpg" alt="instagram logo"
             /></a>
           </div>
           <div>
             <a href="https://vk.com/davidaawow" target="_blank"
-              ><img src="../images/vk-logo.jpg" alt="vkontakte logo"
+              ><img src="images/vk-logo.jpg" alt="vkontakte logo"
             /></a>
           </div>
           <div>
             <a href="mailto:davidik.gegiya@gmail.com" target="_blank"
-              ><img src="../images/gmail-logo.png" alt="gmail logo"
+              ><img src="images/gmail-logo.png" alt="gmail logo"
             /></a>
           </div>
           <div>
             <a href="https://github.com/DavidaaWoW" target="_blank"
-              ><img src="../images/github-logo.png" alt="github logo"
+              ><img src="images/github-logo.png" alt="github logo"
             /></a>
           </div>
         </div>
       </div>
     </footer>
   </body>
+  <script src="scripts/feedback.js"></script>
 </html>

@@ -52,16 +52,19 @@ function send() {
   } else {
     let result =
       "https://api.telegram.org/bot2120832333:AAEi4qHcjBImon5yGwAnoflP3WCobwidR2U/sendMessage?chat_id=336430443&text=%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%BE+%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%BF%D0%BE+%D1%84%D0%BE%D1%80%D0%BC%D0%B5+%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%BE%D0%B9+%D1%81%D0%B2%D1%8F%D0%B7%D0%B8+%D0%BE%D1%82%3A%0D%0A" +
-      Name[0] +
+      Name[0].value +
       "%0D%0A%D0%A2%D0%B5%D0%BA%D1%81%D1%82+%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D0%BD%D0%B8%D1%8F%3A%0D%0A" +
-      message[0] +
+      message[0].value +
       "%0D%0A%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%BD%D1%8B%D0%B9+%D0%B0%D0%B4%D1%80%D0%B5%D1%81+%D1%8D%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D0%B9+%D0%BF%D0%BE%D1%87%D1%82%D1%8B%3A%0D%0A" +
-      mail[0];
-    xhr.open("GET", "result", false);
+      mail[0].value;
+    xhr.open("POST", result, false);
+    xhr.send(null);
     if (xhr.status != 200) {
       alert(xhr.status + ": " + xhr.statusText);
-    } else {
-      alert(xhr.statusText);
     }
+    else {
+      alert("Сообщение отправлено!");
+    }
+    contacts[0].style.display = "none";
   }
 }

@@ -22,9 +22,16 @@
 }
 
 .conference-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
 }
 
@@ -39,16 +46,27 @@
 
 .pp,
 .word {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 2em;
   margin-left: 1em;
 }
 
 .conference-download-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: 2em;
 }
 
@@ -60,6 +78,8 @@
   padding: 0.5em;
   font-weight: bold;
   background-color: #5a798e;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -67,7 +87,10 @@
 .download-button:hover {
   color: #5a798e;
   background-color: burlywood;
-  box-shadow: inset 0 0 0 3px #efbba8;
+  -webkit-box-shadow: inset 0 0 0 3px #efbba8;
+          box-shadow: inset 0 0 0 3px #efbba8;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 

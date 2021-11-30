@@ -14,7 +14,7 @@
     <header>
       <div class="container header_flex">
         <div class="logo">
-          <a href=""><img src="../images/logo.jpg" alt="logo image" /></a>
+          <a href="#top"><img src="../images/logo.jpg" alt="logo image" /></a>
         </div>
         <nav class="menu">
           <ul>
@@ -35,7 +35,7 @@
                   </button>
                 </li>
                 <li class="mobile-menu-border">
-                  <a href="main.html">На главную!</a>
+                  <a href="../index.html">На главную!</a>
                 </li>
                 <li class="mobile-menu-border">
                   <a href="about.html">Коротко обо мне</a>
@@ -52,14 +52,14 @@
                   <a href="work.html">Работа IT специалистом</a>
                 </li>
                 <li>
-                  <button class="contact-button mobile-contact">
+                  <button class="contact-button mobile-contact" onclick="openContacts()">
                     Контакты
                   </button>
                 </li>
               </ul>
             </li>
             <li class="menu-item item-shape">
-              <a href="main.html">На главную!</a>
+              <a href="../index.html">На главную!</a>
             </li>
             <li class="menu-item item-shape">
               <a href="about.html">Коротко обо мне</a>
@@ -76,13 +76,66 @@
               <a href="work.html">Работа IT специалистом</a>
             </li>
             <li class="menu-item">
-              <button class="contact-button">Контакты</button>
+              <button class="contact-button" onclick="openContacts()">Контакты</button>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
+      <div class="contacts-wrapper">
+        <div class="contacts">
+          <div class="contacts-close">
+            <button class="contacts-button" onclick="closeContacts()">
+              <img
+                src="../images/close-mobile-menu.jpg"
+                alt="close-icon"
+                width="64"
+                height="64"
+              />
+            </button>
+          </div>
+          <div class="contacts-links">
+            <h2>Со мной можно всегда связаться по email:</h2>
+            <a href="mailto:davidik.gegiya@gmail.com"
+              >davidik.gegiya@gmail.com</a
+            >
+          </div>
+          <div class="contacts-links">
+            <h2>Или написать во вконтакте:</h2>
+            <a href="https://vk.me/davidaawow">Тык!</a>
+          </div>
+          <h2>Ну или же заполнить форму обратной связи ниже...</h2>
+          <div class="feedback-form">
+            <div class="feedback-text">
+              <h4>
+                Имя/Фамилия
+                <div class="sign">*</div>
+              </h4>
+              <input class="js-name" type="text" />
+              <h4>
+                Email
+                <div class="sign">*</div>
+              </h4>
+              <input class="js-mail" type="text" />
+              <h4>
+                Сообщение:
+                <div class="sign">*</div>
+              </h4>
+              <textarea
+                class="js-message"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <button class="contact-button feedback-button" onclick="send()">
+              Отправить!
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="university container">
         <h1>
           Первого сентября 2020 года я поступил по программе бакалавриата в РТУ
@@ -1412,7 +1465,7 @@ public class Alcoholic {
     <footer>
       <div class="footer-grid">
         <div class="footer-main">
-          <a href="main.html">На главную</a>
+          <a href="../index.html">На главную</a>
         </div>
         <div class="footer-about">
           <a href="about.html">Коротко обо мне</a>
@@ -1456,4 +1509,5 @@ public class Alcoholic {
       </div>
     </footer>
   </body>
+<script src="../scripts/feedback.js"></script>
 </html>
